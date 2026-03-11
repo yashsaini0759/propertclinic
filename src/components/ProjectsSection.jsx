@@ -1,10 +1,12 @@
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { FiExternalLink } from 'react-icons/fi'
 
 const projects = [
     {
         name: 'JANNAT VILLAS',
-        description: 'Welcome to Jannat Villas, where luxury meets tranquility. Nestled in a serene environment, these premium villas are designed to provide an extraordinary living experience.',
+        description:
+            'Welcome to Jannat Villas, where luxury meets tranquility. Nestled in a serene environment, these premium villas are designed to provide an extraordinary living experience.',
         image: '/images/project_jannat_villas.png',
         link: 'https://kashipropertyclinic.com/jannat-villas',
         badge: 'Premium Villas',
@@ -12,7 +14,8 @@ const projects = [
     },
     {
         name: 'VEDANTA HEIGHTS',
-        description: 'Vedanta Heights is a residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside.',
+        description:
+            'Vedanta Heights is a residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside.',
         image: '/images/project_vedanta_heights.png',
         link: 'https://kashipropertyclinic.com/vedanta-heights',
         badge: 'Luxury Residences',
@@ -20,7 +23,8 @@ const projects = [
     },
     {
         name: 'VEDANTA GREENS',
-        description: 'Being modeled into perfection, Vedanta Greens is a residential development in a stellar location near the market area with 2BHK and 3BHK villas.',
+        description:
+            'Being modeled into perfection, Vedanta Greens is a residential development in a stellar location near the market area with 2BHK and 3BHK villas.',
         image: '/images/project_vedanta_greens.png',
         link: 'https://kashipropertyclinic.com/vedanta-greens',
         badge: '2 & 3 BHK Villas',
@@ -30,7 +34,7 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <section className="py-24 px-4 sm:px-6 z-10 relative" style={{ background: '#F8F9FA' }}>
+        <section className="py-24 px-4 sm:px-6 overflow-hidden" style={{ background: '#F8F9FA' }}>
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
                 <motion.div
@@ -41,81 +45,76 @@ export default function ProjectsSection() {
                     className="text-center mb-14"
                 >
                     <p className="section-tag mb-3">Featured Developments</p>
-                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0B1F22] mb-4">
+                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0F1A2A] mb-4">
                         Our Premium{' '}
-                        <span className="italic" style={{ color: '#0F3D3E' }}>Projects</span>
+                        <span className="italic font-bold text-[#1E4D8F]">Projects</span>
                     </h2>
-                    <div className="gold-divider mx-auto mb-5" />
+                    <div className="accent-divider mx-auto mb-5" />
                     <p className="text-gray-500 font-body max-w-xl mx-auto">
                         Discover our curated selection of luxury residential and commercial developments.
                     </p>
                 </motion.div>
 
-                {/* Grid Layout (Replaces Slider) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Projects Grid */}
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
                     {projects.map((project, i) => (
                         <motion.div
                             key={project.name}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.15, duration: 0.6 }}
-                            className="group relative rounded-2xl overflow-hidden shadow-luxury cursor-pointer card-hover"
-                            style={{ height: 460 }}
+                            whileHover={{ y: -8 }}
+                            className="group bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-300 border border-gray-100 flex flex-col"
                         >
-                            {/* Image */}
-                            <div className="img-zoom absolute inset-0">
+                            {/* Target Image Half */}
+                            <div className="relative h-64 overflow-hidden img-zoom flex-shrink-0">
                                 <img
                                     src={project.image}
                                     alt={project.name}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     loading="lazy"
                                 />
+
+                                {/* Badge Overlay */}
+                                <div className="absolute top-4 left-4">
+                                    <span className="px-3 py-1.5 rounded-full text-[11px] font-body font-semibold tracking-wider text-white bg-[#C0392B] shadow-md">
+                                        {project.badge}
+                                    </span>
+                                </div>
                             </div>
 
-                            {/* Gradient */}
-                            <div className="absolute inset-0"
-                                style={{
-                                    background: 'linear-gradient(180deg, rgba(11,31,34,0) 30%, rgba(11,31,34,0.75) 65%, rgba(11,31,34,0.97) 100%)',
-                                }}
-                            />
-
-                            {/* Badge */}
-                            <div className="absolute top-5 left-5">
-                                <span className="px-3 py-1.5 rounded-full text-[11px] font-body font-semibold tracking-wider"
-                                    style={{
-                                        background: 'rgba(203,161,53,0.15)',
-                                        border: '1px solid rgba(203,161,53,0.4)',
-                                        color: '#CBA135',
-                                        backdropFilter: 'blur(10px)',
-                                    }}>
-                                    {project.badge}
-                                </span>
-                            </div>
-
-                            {/* Content */}
-                            <div className="absolute bottom-0 left-0 right-0 p-7">
-                                <p className="text-white/50 text-xs font-body tracking-widest uppercase mb-1">
+                            {/* Text Description Half */}
+                            <div className="p-7 flex flex-col flex-1">
+                                <p className="text-gray-400 text-xs font-body tracking-widest uppercase mb-2">
                                     📍 {project.location}
                                 </p>
-                                <h3 className="font-heading text-2xl font-bold text-white mb-2 tracking-wide">
+                                <h3 className="font-heading text-xl font-bold text-[#0F1A2A] mb-3 group-hover:text-[#1E4D8F] transition-colors">
                                     {project.name}
                                 </h3>
-                                <p className="text-white/65 font-body text-sm leading-relaxed mb-5 line-clamp-3">
+                                <p className="text-gray-600 font-body text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
                                     {project.description}
                                 </p>
+
+                                {/* View Button */}
                                 <a
                                     href={project.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 text-sm font-body font-semibold text-[#CBA135] hover:gap-3 transition-all"
+                                    className="btn-primary w-full text-center text-sm flex items-center justify-center gap-2 mt-auto"
                                 >
-                                    View Project <FiExternalLink size={14} />
+                                    View Project <FiExternalLink size={16} />
                                 </a>
                             </div>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     )

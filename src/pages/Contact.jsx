@@ -10,7 +10,7 @@ const contactCards = [
         label: 'Call Us',
         value: '+91 9627088818',
         href: 'tel:+919627088818',
-        color: '#CBA135',
+        color: '#1E4D8F',
     },
     {
         icon: <FaWhatsapp size={28} />,
@@ -24,14 +24,14 @@ const contactCards = [
         label: 'Email Us',
         value: 'contact@kashipropertyclinic.com',
         href: 'mailto:contact@kashipropertyclinic.com',
-        color: '#CBA135',
+        color: '#1E4D8F',
     },
     {
         icon: <MdAccessTime size={28} />,
         label: 'Working Hours',
         value: 'Mon – Sat: 9 AM – 5 PM',
         href: null,
-        color: '#4A6FA5',
+        color: '#C0392B',
     },
 ]
 
@@ -55,10 +55,10 @@ export default function Contact() {
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)' }}
+                style={{ background: '#0F1A2A' }}
             >
                 <div className="absolute inset-0 opacity-10"
-                    style={{ backgroundImage: 'radial-gradient(circle at 60% 50%, #CBA135 0%, transparent 50%)' }}
+                    style={{ backgroundImage: 'radial-gradient(circle at 60% 50%, #1E4D8F 0%, transparent 50%)' }}
                 />
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -69,9 +69,9 @@ export default function Contact() {
                     <p className="section-tag mb-4">Get In Touch</p>
                     <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-5">
                         Contact{' '}
-                        <span className="italic" style={{ color: '#CBA135' }}>Us Today</span>
+                        <span className="italic font-bold text-[#4A6FA5]">Us Today</span>
                     </h1>
-                    <div className="gold-divider mx-auto mb-6" />
+                    <div className="accent-divider mx-auto mb-6" />
                     <p className="text-white/60 font-body max-w-xl mx-auto text-lg">
                         Reach out for seamless real estate solutions and expert guidance tailored to your needs.
                     </p>
@@ -111,7 +111,7 @@ export default function Contact() {
                                             {card.icon}
                                         </div>
                                         <p className="text-gray-400 text-xs font-body tracking-widest uppercase mb-2">{card.label}</p>
-                                        <p className="text-[#0B1F22] font-body font-semibold text-sm leading-relaxed hover:text-[#CBA135] transition-colors">{card.value}</p>
+                                        <p className="text-[#0F1A2A] font-body font-semibold text-sm leading-relaxed hover:text-[#1E4D8F] transition-colors">{card.value}</p>
                                     </a>
                                 ) : (
                                     <div
@@ -129,7 +129,7 @@ export default function Contact() {
                                             {card.icon}
                                         </div>
                                         <p className="text-gray-400 text-xs font-body tracking-widest uppercase mb-2">{card.label}</p>
-                                        <p className="text-[#0B1F22] font-body font-semibold text-sm leading-relaxed">{card.value}</p>
+                                        <p className="text-[#0F1A2A] font-body font-semibold text-sm leading-relaxed">{card.value}</p>
                                     </div>
                                 )}
                             </motion.div>
@@ -147,9 +147,9 @@ export default function Contact() {
                             className="rounded-3xl p-8"
                             style={{ background: 'white', boxShadow: '0 8px 40px rgba(0,0,0,0.08)' }}
                         >
-                            <h2 className="font-heading text-3xl font-bold text-[#0B1F22] mb-2">Send a Message</h2>
+                            <h2 className="font-heading text-3xl font-bold text-[#0F1A2A] mb-2">Send a Message</h2>
                             <p className="text-gray-400 font-body text-sm mb-7">Your message will be sent to our WhatsApp</p>
-                            <div className="gold-divider mb-7" />
+                            <div className="accent-divider mb-7" />
 
                             {submitted ? (
                                 <div className="text-center py-12">
@@ -174,12 +174,12 @@ export default function Contact() {
                                                 placeholder={field.placeholder}
                                                 value={form[field.name]}
                                                 onChange={(e) => setForm({ ...form, [field.name]: e.target.value })}
-                                                className="w-full px-4 py-3 rounded-xl font-body text-sm text-[#0B1F22] placeholder-gray-300 transition-all outline-none"
+                                                className="w-full px-4 py-3 rounded-xl font-body text-sm text-[#0F1A2A] placeholder-gray-300 transition-all outline-none"
                                                 style={{
                                                     background: '#F8F9FA',
                                                     border: '1.5px solid #e5e7eb',
                                                 }}
-                                                onFocus={(e) => e.target.style.borderColor = '#CBA135'}
+                                                onFocus={(e) => e.target.style.borderColor = '#1E4D8F'}
                                                 onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                                             />
                                         </div>
@@ -194,16 +194,16 @@ export default function Contact() {
                                             placeholder="I'm interested in..."
                                             value={form.message}
                                             onChange={(e) => setForm({ ...form, message: e.target.value })}
-                                            className="w-full px-4 py-3 rounded-xl font-body text-sm text-[#0B1F22] placeholder-gray-300 transition-all outline-none resize-none"
+                                            className="w-full px-4 py-3 rounded-xl font-body text-sm text-[#0F1A2A] placeholder-gray-300 transition-all outline-none resize-none"
                                             style={{
                                                 background: '#F8F9FA',
                                                 border: '1.5px solid #e5e7eb',
                                             }}
-                                            onFocus={(e) => e.target.style.borderColor = '#CBA135'}
+                                            onFocus={(e) => e.target.style.borderColor = '#1E4D8F'}
                                             onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                                         />
                                     </div>
-                                    <button type="submit" className="btn-gold w-full text-sm">
+                                    <button type="submit" className="btn-primary w-full text-sm">
                                         Send via WhatsApp 💬
                                     </button>
                                 </form>
@@ -235,14 +235,14 @@ export default function Contact() {
                             <div
                                 className="rounded-2xl p-6"
                                 style={{
-                                    background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)',
-                                    border: '1px solid rgba(203,161,53,0.2)',
+                                    background: '#0F1A2A',
+                                    border: '1px solid rgba(74,111,165,0.2)',
                                 }}
                             >
                                 <div className="flex items-start gap-4">
                                     <div
                                         className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                                        style={{ background: 'rgba(203,161,53,0.15)', color: '#CBA135' }}
+                                        style={{ background: 'rgba(74,111,165,0.15)', color: '#4A6FA5' }}
                                     >
                                         <MdLocationOn size={24} />
                                     </div>
@@ -256,7 +256,7 @@ export default function Contact() {
                                             href="https://maps.app.goo.gl/NhSp9q1odoMBohWHA"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1.5 mt-3 text-[#CBA135] text-sm font-body font-semibold hover:gap-2.5 transition-all"
+                                            className="inline-flex items-center gap-1.5 mt-3 text-[#4A6FA5] text-sm font-body font-semibold hover:gap-2.5 transition-all"
                                         >
                                             Get Directions →
                                         </a>

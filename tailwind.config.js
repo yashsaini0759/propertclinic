@@ -7,18 +7,16 @@ export default {
     theme: {
         extend: {
             colors: {
-                emerald: {
-                    DEFAULT: '#0F3D3E',
-                    dark: '#0B1F22',
-                    light: '#1C5A5B',
+                primary: {
+                    DEFAULT: '#1E4D8F',
+                    dark: '#0F1A2A',
+                    light: '#4A6FA5',
                 },
-                gold: {
-                    DEFAULT: '#CBA135',
-                    light: '#E5BE6A',
-                    dark: '#A07820',
+                accent: {
+                    DEFAULT: '#C0392B',
                 },
-                slate: {
-                    accent: '#4A6FA5',
+                background: {
+                    DEFAULT: '#F8F9FB',
                 },
             },
             fontFamily: {
@@ -26,9 +24,9 @@ export default {
                 body: ['Inter', 'sans-serif'],
             },
             backgroundImage: {
-                'luxury-gradient': 'linear-gradient(135deg, #0F3D3E, #1C5A5B)',
-                'dark-gradient': 'linear-gradient(135deg, #0B1F22, #0F3D3E)',
-                'gold-gradient': 'linear-gradient(135deg, #CBA135, #E5BE6A)',
+                'luxury-gradient': 'linear-gradient(135deg, #0F1A2A, #1E4D8F)',
+                'dark-gradient': 'linear-gradient(135deg, #0F1A2A, #0a111c)',
+                'primary-gradient': 'linear-gradient(135deg, #1E4D8F, #4A6FA5)',
             },
             animation: {
                 'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
@@ -56,7 +54,7 @@ export default {
             },
             boxShadow: {
                 'luxury': '0 20px 60px rgba(0,0,0,0.3)',
-                'gold': '0 0 30px rgba(203, 161, 53, 0.4)',
+                'primary': '0 0 30px rgba(30, 77, 143, 0.4)',
                 'glass': '0 8px 32px rgba(31, 38, 135, 0.15)',
             },
         },

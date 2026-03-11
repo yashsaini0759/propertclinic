@@ -37,11 +37,11 @@ export default function Services() {
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)' }}
+                style={{ background: '#0F1A2A' }}
             >
                 <div className="absolute inset-0 opacity-10"
                     style={{
-                        backgroundImage: 'radial-gradient(circle at 30% 50%, #CBA135 0%, transparent 50%), radial-gradient(circle at 70% 50%, #4A6FA5 0%, transparent 50%)',
+                        backgroundImage: 'radial-gradient(circle at 30% 50%, #1E4D8F 0%, transparent 50%), radial-gradient(circle at 70% 50%, #C0392B 0%, transparent 50%)',
                     }}
                 />
                 <motion.div
@@ -53,9 +53,9 @@ export default function Services() {
                     <p className="section-tag mb-4">Our Services</p>
                     <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-5 leading-tight">
                         Your Real Estate{' '}
-                        <span className="italic" style={{ color: '#CBA135' }}>Partner</span>
+                        <span className="italic font-bold text-[#4A6FA5]">Partner</span>
                     </h1>
-                    <div className="gold-divider mx-auto mb-6" />
+                    <div className="accent-divider mx-auto mb-6" />
                     <p className="text-white/60 font-body max-w-xl mx-auto text-lg leading-relaxed">
                         Comprehensive solutions for property search, legal transactions, home loans, and management services tailored for you.
                     </p>
@@ -79,12 +79,12 @@ export default function Services() {
                                 <div
                                     className="rounded-3xl p-12 flex flex-col items-center justify-center text-center"
                                     style={{
-                                        background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)',
+                                        background: '#0F1A2A',
                                         minHeight: 280,
                                     }}
                                 >
-                                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-5 text-[#CBA135]"
-                                        style={{ background: 'rgba(203,161,53,0.15)', border: '1px solid rgba(203,161,53,0.3)' }}>
+                                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-5 text-[#4A6FA5]"
+                                        style={{ background: 'rgba(74,111,165,0.15)', border: '1px solid rgba(74,111,165,0.3)' }}>
                                         {svc.icon}
                                     </div>
                                     <h3 className="font-heading text-2xl font-bold text-white">{svc.title}</h3>
@@ -93,12 +93,12 @@ export default function Services() {
 
                             {/* Text Side */}
                             <div>
-                                <div className="gold-divider mb-5" />
+                                <div className="accent-divider mb-5" />
                                 <p className="text-gray-600 font-body leading-relaxed mb-7">{svc.description}</p>
                                 <ul className="space-y-3 mb-7">
                                     {svc.features.map((feature) => (
                                         <li key={feature} className="flex items-center gap-3 text-gray-700 font-body">
-                                            <span className="w-2 h-2 rounded-full bg-[#CBA135] flex-shrink-0" />
+                                            <span className="w-2 h-2 rounded-full bg-[#1E4D8F] flex-shrink-0" />
                                             {feature}
                                         </li>
                                     ))}
@@ -107,7 +107,7 @@ export default function Services() {
                                     href="https://wa.me/9627088818"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="btn-gold inline-flex items-center gap-2 text-sm"
+                                    className="btn-primary inline-flex items-center gap-2 text-sm"
                                 >
                                     Get Consultation <FiArrowRight />
                                 </a>

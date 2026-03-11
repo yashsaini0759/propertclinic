@@ -77,11 +77,11 @@ export default function Properties() {
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)' }}
+                style={{ background: '#0F1A2A' }}
             >
                 <div className="absolute inset-0 opacity-10"
                     style={{
-                        backgroundImage: 'radial-gradient(circle at 20% 50%, #CBA135 0%, transparent 50%)',
+                        backgroundImage: 'radial-gradient(circle at 20% 50%, #1E4D8F 0%, transparent 50%)',
                     }}
                 />
                 <motion.div
@@ -93,9 +93,9 @@ export default function Properties() {
                     <p className="section-tag mb-4">Our Portfolio</p>
                     <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-5">
                         Premium{' '}
-                        <span className="italic" style={{ color: '#CBA135' }}>Properties</span>
+                        <span className="italic font-bold text-[#4A6FA5]">Properties</span>
                     </h1>
-                    <div className="gold-divider mx-auto mb-6" />
+                    <div className="accent-divider mx-auto mb-6" />
                     <p className="text-white/60 font-body max-w-xl mx-auto text-lg">
                         Discover diverse properties and expert services for seamless real estate transactions and informed decisions.
                     </p>
@@ -126,11 +126,9 @@ export default function Properties() {
                                     <div className="absolute inset-0"
                                         style={{ background: 'linear-gradient(180deg, transparent 50%, rgba(11,31,34,0.7) 100%)' }}
                                     />
-                                    {/* Badge */}
-                                    <span className="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wider font-body"
+                                    <span className="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wider font-body text-white"
                                         style={{
-                                            background: prop.type === 'Commercial' ? 'rgba(74,111,165,0.85)' : 'rgba(203,161,53,0.9)',
-                                            color: prop.type === 'Commercial' ? '#fff' : '#0B1F22',
+                                            background: prop.type === 'Commercial' ? 'rgba(192,57,43,0.85)' : 'rgba(30,77,143,0.9)',
                                         }}>
                                         {prop.badge}
                                     </span>
@@ -141,8 +139,8 @@ export default function Properties() {
                                     <p className="text-gray-400 text-xs font-body tracking-widest uppercase mb-1">
                                         📍 {prop.location}
                                     </p>
-                                    <h3 className="font-heading text-xl font-bold text-[#0B1F22] mb-1">{prop.name}</h3>
-                                    <p className="text-[#CBA135] text-sm font-body font-medium mb-3 italic">{prop.tagline}</p>
+                                    <h3 className="font-heading text-xl font-bold text-[#0F1A2A] mb-1">{prop.name}</h3>
+                                    <p className="text-[#C0392B] text-sm font-body font-medium mb-3 italic">{prop.tagline}</p>
                                     <p className="text-gray-500 font-body text-sm leading-relaxed mb-5 line-clamp-2">
                                         {prop.description}
                                     </p>
@@ -151,7 +149,7 @@ export default function Properties() {
                                             href={prop.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="btn-gold text-xs flex-1 text-center flex items-center justify-center gap-1.5"
+                                            className="btn-primary text-xs flex-1 text-center flex items-center justify-center gap-1.5"
                                         >
                                             View <FiExternalLink size={12} />
                                         </a>
@@ -160,7 +158,7 @@ export default function Properties() {
                                                 href={prop.brochure}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="btn-outline-gold text-xs flex-1 text-center"
+                                                className="btn-secondary text-xs flex-1 text-center"
                                             >
                                                 Brochure
                                             </a>

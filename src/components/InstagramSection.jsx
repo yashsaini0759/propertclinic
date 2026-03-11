@@ -27,16 +27,16 @@ export default function InstagramSection() {
                     className="text-center mb-12"
                 >
                     <p className="section-tag mb-3">Social Media</p>
-                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0B1F22] mb-4">
+                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0F1A2A] mb-4">
                         Follow Us on{' '}
-                        <span className="italic" style={{ color: '#0F3D3E' }}>Instagram</span>
+                        <span className="italic font-bold text-[#1E4D8F]">Instagram</span>
                     </h2>
-                    <div className="gold-divider mx-auto mb-5" />
+                    <div className="accent-divider mx-auto mb-5" />
                     <a
                         href="https://www.instagram.com/kashipropertyclinic"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-[#0F3D3E] font-body font-semibold hover:text-[#CBA135] transition-colors"
+                        className="inline-flex items-center gap-2 text-[#4A6FA5] font-body font-semibold hover:text-[#1E4D8F] transition-colors"
                     >
                         <FaInstagram size={18} />
                         @kashipropertyclinic
@@ -65,7 +65,7 @@ export default function InstagramSection() {
                             />
                             {/* Hover overlay */}
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
-                                style={{ background: 'rgba(15,61,62,0.7)' }}>
+                                style={{ background: 'rgba(30,77,143,0.7)' }}>
                                 <div className="transform scale-75 group-hover:scale-100 transition-transform duration-300">
                                     <FaInstagram className="text-white text-3xl" />
                                 </div>

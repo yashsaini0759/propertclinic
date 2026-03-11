@@ -40,14 +40,14 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2.5 group">
                         <div className="w-9 h-9 rounded-lg flex items-center justify-center"
-                            style={{ background: 'linear-gradient(135deg, #CBA135, #E5BE6A)' }}>
-                            <MdOutlineRealEstateAgent className="text-[#0B1F22] text-xl" />
+                            style={{ background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)' }}>
+                            <MdOutlineRealEstateAgent className="text-white text-xl" />
                         </div>
                         <div className="leading-tight">
-                            <span className="block text-white font-heading font-bold text-base tracking-wide group-hover:text-[#CBA135] transition-colors">
+                            <span className="block text-white font-heading font-bold text-base tracking-wide group-hover:text-[#4A6FA5] transition-colors">
                                 Property Clinic
                             </span>
-                            <span className="block text-[#CBA135] text-[9px] tracking-[0.2em] uppercase font-body font-medium">
+                            <span className="block text-[#4A6FA5] text-[9px] tracking-[0.2em] uppercase font-body font-medium">
                                 Kashipur
                             </span>
                         </div>
@@ -59,13 +59,10 @@ export default function Navbar() {
                             <Link
                                 key={link.path}
                                 to={link.path}
-                                className={`relative font-body text-sm font-medium tracking-wide transition-colors duration-300 group ${location.pathname === link.path
-                                    ? 'text-[#CBA135]'
-                                    : 'text-white/80 hover:text-white'
-                                    }`}
+                                className={`relative font-body text-sm font-medium tracking-wide transition-colors duration-300 group text-white hover:text-[#4A6FA5] hover-underline-animation`}
                             >
                                 {link.name}
-                                <span className={`absolute -bottom-1 left-0 h-[2px] rounded bg-[#CBA135] transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                                <span className={`absolute -bottom-1 left-0 h-[2px] rounded bg-[#C0392B] transition-all duration-300 ${location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
                                     }`} />
                             </Link>
                         ))}
@@ -73,7 +70,7 @@ export default function Navbar() {
 
                     {/* Mobile Hamburger */}
                     <button
-                        className="md:hidden text-white text-2xl focus:outline-none p-2"
+                        className="md:hidden text-white hover:text-[#4A6FA5] transition-colors text-2xl focus:outline-none p-2"
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -110,22 +107,22 @@ export default function Navbar() {
                         className="fixed top-0 right-0 bottom-0 z-50 flex flex-col"
                         style={{
                             width: 'min(320px, 85vw)',
-                            background: 'rgba(11, 31, 34, 0.97)',
+                            background: 'rgba(15, 26, 42, 0.97)',
                             backdropFilter: 'blur(24px)',
                             WebkitBackdropFilter: 'blur(24px)',
-                            borderLeft: '1px solid rgba(203,161,53,0.2)',
+                            borderLeft: '1px solid rgba(30, 77, 143, 0.2)',
                         }}
                     >
-                        {/* Gold top accent */}
+                        {/* Blue top accent */}
                         <div className="absolute top-0 left-0 right-0 h-[2px]"
-                            style={{ background: 'linear-gradient(90deg, transparent, #CBA135, #E5BE6A)' }} />
+                            style={{ background: 'linear-gradient(90deg, transparent, #1E4D8F, #4A6FA5)' }} />
 
                         {/* Drawer Header */}
                         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/10">
                             <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2">
                                 <div className="w-8 h-8 rounded-lg flex items-center justify-center"
-                                    style={{ background: 'linear-gradient(135deg, #CBA135, #E5BE6A)' }}>
-                                    <MdOutlineRealEstateAgent className="text-[#0B1F22] text-base" />
+                                    style={{ background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)' }}>
+                                    <MdOutlineRealEstateAgent className="text-white text-base" />
                                 </div>
                                 <span className="text-white font-heading font-bold text-sm">Property Clinic</span>
                             </Link>
@@ -146,14 +143,14 @@ export default function Navbar() {
                                     <Link
                                         to={link.path}
                                         onClick={() => setMenuOpen(false)}
-                                        className={`flex items-center justify-between py-3.5 px-4 rounded-xl font-body font-medium text-base transition-all ${location.pathname === link.path
-                                            ? 'text-[#CBA135] bg-[#CBA135]/10'
-                                            : 'text-white/80 hover:text-white hover:bg-white/5'
+                                        className={`flex items-center justify-between py-3.5 px-4 rounded-xl font-body font-medium text-base transition-all text-white hover:text-[#4A6FA5] ${location.pathname === link.path
+                                            ? 'bg-[#1E4D8F]/10'
+                                            : 'hover:bg-[#1E4D8F]/10'
                                             }`}
                                     >
                                         {link.name}
                                         {location.pathname === link.path && (
-                                            <span className="w-1.5 h-1.5 rounded-full bg-[#CBA135]" />
+                                            <span className="w-1.5 h-1.5 rounded-full bg-[#C0392B]" />
                                         )}
                                     </Link>
                                 </motion.div>
