@@ -1,3 +1,4 @@
+
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowLeft, FiMapPin, FiExternalLink, FiDownload, FiCheckCircle } from 'react-icons/fi'
