@@ -33,15 +33,13 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="lg:col-span-1">
                         {/* Logo */}
-                        <Link to="/" className="flex items-center gap-2.5 mb-5 group w-fit">
-                            <div className="w-9 h-9 rounded-lg flex items-center justify-center"
-                                style={{ background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)' }}>
-                                <MdOutlineRealEstateAgent className="text-white text-xl" />
-                            </div>
-                            <div className="leading-tight">
-                                <span className="block text-white font-heading font-bold text-base">Property Clinic</span>
-                                <span className="block text-[#4A6FA5] text-[9px] tracking-[0.2em] uppercase font-body">Kashipur</span>
-                            </div>
+                        <Link to="/" className="flex items-center mb-5 w-fit">
+                            <img
+                                src="/images/logo/propertyclinic.avif"
+                                alt="Kashi Property Clinic"
+                                className="h-12 w-auto object-contain"
+                                loading="lazy"
+                            />
                         </Link>
                         <p className="text-white/50 font-body text-sm leading-relaxed mb-6">
                             Your trusted partner for comprehensive real estate solutions in Kashipur, Uttarakhand. Building trust since 2018.

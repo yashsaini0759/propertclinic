@@ -38,19 +38,13 @@ export default function Navbar() {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
                     {/* Logo */}
-                    <Link to="/" className="flex items-center gap-2.5 group">
-                        <div className="w-9 h-9 rounded-lg flex items-center justify-center"
-                            style={{ background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)' }}>
-                            <MdOutlineRealEstateAgent className="text-white text-xl" />
-                        </div>
-                        <div className="leading-tight">
-                            <span className="block text-white font-heading font-bold text-base tracking-wide group-hover:text-[#4A6FA5] transition-colors">
-                                Property Clinic
-                            </span>
-                            <span className="block text-[#4A6FA5] text-[9px] tracking-[0.2em] uppercase font-body font-medium">
-                                Kashipur
-                            </span>
-                        </div>
+                    <Link to="/" className="flex items-center group">
+                        <img
+                            src="/images/logo/propertyclinic.avif"
+                            alt="Kashi Property Clinic"
+                            className="h-12 w-auto object-contain"
+                            loading="eager"
+                        />
                     </Link>
 
                     {/* Desktop Nav */}
@@ -119,12 +113,13 @@ export default function Navbar() {
 
                         {/* Drawer Header */}
                         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/10">
-                            <Link to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2">
-                                <div className="w-8 h-8 rounded-lg flex items-center justify-center"
-                                    style={{ background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)' }}>
-                                    <MdOutlineRealEstateAgent className="text-white text-base" />
-                                </div>
-                                <span className="text-white font-heading font-bold text-sm">Property Clinic</span>
+                            <Link to="/" onClick={() => setMenuOpen(false)}>
+                                <img
+                                    src="/images/logo/propertyclinic.avif"
+                                    alt="Kashi Property Clinic"
+                                    className="h-10 w-auto object-contain"
+                                    loading="eager"
+                                />
                             </Link>
                             <button onClick={() => setMenuOpen(false)} className="text-white/60 hover:text-white p-1" aria-label="Close menu">
                                 <FiX size={22} />
