@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import Properties from './pages/Properties'
 import Contact from './pages/Contact'
+import PropertyDetail from './pages/PropertyDetail'
 
 function ScrollToTop() {
     const { pathname } = useLocation()
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/properties" element={<Properties />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/property/:slug" element={<PropertyDetail />} />
             </Routes>
             <FloatingWhatsApp />
             <ScrollToTopButton />

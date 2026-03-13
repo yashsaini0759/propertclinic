@@ -86,12 +86,12 @@ export default function HeroSection() {
                     className="w-full h-full object-cover object-center"
                     loading="eager"
                 />
-                {/* Multi-layer gradient overlay */}
+                {/* Lighter gradient overlay — not dull on mobile */}
                 <div className="absolute inset-0"
                     style={{
                         background: `
-              linear-gradient(180deg, rgba(15,26,42,0.4) 0%, rgba(15,26,42,0.15) 40%, rgba(15,26,42,0.75) 80%, rgba(15,26,42,0.95) 100%),
-              linear-gradient(135deg, rgba(30,77,143,0.6) 0%, rgba(15,26,42,0.4) 100%)
+              linear-gradient(180deg, rgba(11,31,34,0.25) 0%, rgba(11,31,34,0.05) 35%, rgba(11,31,34,0.6) 75%, rgba(11,31,34,0.88) 100%),
+              linear-gradient(135deg, rgba(15,61,62,0.4) 0%, transparent 60%)
             `
                     }}
                 />
