@@ -11,7 +11,7 @@ export const properties = [
     image: '/images/project_jannat_villas.png',
     brochure: 'https://assets.zyrosite.com/mP42OG07MzUooVkq/jannat-by-vedanta-mxBMw393Q7cp16QE.pdf',
     mapLink: 'https://maps.app.goo.gl/5btLzyJG1SodiA378',
-    mapEmbed: 'https://maps.google.com/maps?q=29.22557,78.9387201&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Jannat+Villas+by+Vedanta+Kashipur+Uttarakhand&ll=29.22557,78.9387201&z=17&iwloc=near&output=embed',
     description: 'Where luxury meets tranquility. Nestled in a serene environment, Jannat Villas offers an extraordinary living experience with world-class amenities and breathtaking surroundings. Every villa is crafted to provide the finest comfort, blending contemporary architecture with nature\'s tranquility.',
     highlights: [
       '2 BHK & 3 BHK Premium Villas',
@@ -34,7 +34,7 @@ export const properties = [
     image: '/images/project_vedanta_heights.png',
     brochure: 'https://assets.zyrosite.com/mP42OG07MzUooVkq/vedanta-brochure-rgb-A3QOGNkBn7iwkzW7.pdf',
     mapLink: 'https://maps.app.goo.gl/zW7CDPPRJM5BwCRK6',
-    mapEmbed: 'https://maps.google.com/maps?q=30.2834533,77.9859879&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Vedanta+Heights+Kashipur+Uttarakhand&ll=30.2834533,77.9859879&z=17&iwloc=near&output=embed',
     description: 'A residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside. Vedanta Heights stands as a symbol of sophisticated living — where premium architecture, well-planned spaces, and top-tier amenities come together to create a truly exceptional lifestyle.',
     highlights: [
       '2 BHK & 3 BHK Luxury Apartments',
@@ -57,7 +57,7 @@ export const properties = [
     image: '/images/project_vedanta_greens.png',
     brochure: 'https://assets.zyrosite.com/mP42OG07MzUooVkq/vedanta-greens-3-m2Wa9E47PetrvxOM.pdf',
     mapLink: 'https://maps.app.goo.gl/iRzEVcT5fBA4ngt96',
-    mapEmbed: 'https://maps.google.com/maps?q=29.193316,78.954278&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Vedanta+Greens+Kashipur+Uttarakhand&ll=29.193316,78.954278&z=17&iwloc=near&output=embed',
     description: 'A residential development in a stellar location near the market area with well-crafted 2 BHK and 3 BHK villas surrounded by lush greenery. Vedanta Greens offers the perfect blend of urban convenience and natural serenity — a home where your family can grow, breathe, and thrive.',
     highlights: [
       '2 BHK & 3 BHK Spacious Villas',
@@ -80,7 +80,7 @@ export const properties = [
     image: '/images/project_vedanta_elite.png',
     brochure: '/brochures/vedanta-elite.pdf',
     mapLink: 'https://maps.app.goo.gl/Nki2AEdUtLku5HSw6',
-    mapEmbed: 'https://maps.google.com/maps?q=29.2400125,78.9843906&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Vedanta+Elite+Kashipur+Uttarakhand&ll=29.2400125,78.9843906&z=17&iwloc=near&output=embed',
     description: 'Vedanta Elite represents the pinnacle of luxury living — a signature residential project for those who settle for nothing less than the best. World-class architecture, premium interiors, and an unparalleled suite of amenities define this iconic development.',
     highlights: [
       'Ultra-luxury 3 BHK & 4 BHK residences',
@@ -103,7 +103,7 @@ export const properties = [
     image: '/images/project_vedanta_avenue.png',
     brochure: '/brochures/vedanta-avenue.pdf',
     mapLink: 'https://maps.app.goo.gl/oh11ntVpCRfmF4m3A',
-    mapEmbed: 'https://maps.google.com/maps?q=29.245478,78.991527&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Vedanta+Avenue+Kashipur+Uttarakhand&ll=29.245478,78.991527&z=17&iwloc=near&output=embed',
     description: 'Vedanta Avenue is an exclusive plotted residential development offering premium residential plots in prime locations of Kashipur. With tree-lined avenues, underground utilities, and well-planned infrastructure, this is the ideal canvas for your dream home.',
     highlights: [
       'Residential & commercial plots available',
@@ -126,7 +126,7 @@ export const properties = [
     image: '/images/project_vedanta_residency.png',
     brochure: '/brochures/vedanta-residency.pdf',
     mapLink: 'https://maps.app.goo.gl/6ZGBrpF4V6xtWf7h8',
-    mapEmbed: 'https://maps.google.com/maps?q=29.266419,79.013133&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Vedanta+Residency+Kashipur+Uttarakhand&ll=29.266419,79.013133&z=17&iwloc=near&output=embed',
     description: 'Vedanta Residency is a premium apartment complex designed for families seeking comfort, convenience, and community. With thoughtfully designed spaces, modern amenities, and a serene environment, it offers the perfect retreat from the busy world.',
     highlights: [
       '1, 2 & 3 BHK Luxury Apartments',
@@ -149,7 +149,7 @@ export const properties = [
     image: '/images/project_urban_bazar.png',
     brochure: '/brochures/urban-bazar-vedanta.pdf',
     mapLink: 'https://maps.app.goo.gl/UXc3keB5x7kBYJPt5',
-    mapEmbed: 'https://maps.google.com/maps?q=29.211045,78.940289&z=17&output=embed',
+    mapEmbed: 'https://maps.google.com/maps?q=Urban+Bazar+by+Vedanta+Kashipur+Uttarakhand&ll=29.211045,78.940289&z=17&iwloc=near&output=embed',
     description: 'Urban Bazar by Vedanta is a vibrant commercial destination that redefines the shopping and dining experience in Kashipur. With a dynamic mix of retail outlets, F&B zones, and business spaces, it is the go-to hub for entrepreneurs and investors.',
     highlights: [
       'Retail shops, showrooms & office spaces',
