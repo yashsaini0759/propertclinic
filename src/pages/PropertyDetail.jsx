@@ -1,4 +1,3 @@
-
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowLeft, FiMapPin, FiExternalLink, FiDownload, FiCheckCircle } from 'react-icons/fi'
@@ -112,11 +111,39 @@ export default function PropertyDetail() {
                 <div className="px-7 pt-7 pb-4">
                   <h2 className="font-heading text-2xl font-bold text-[#0B1F22] mb-1">Location</h2>
                   <div className="gold-divider mb-4" />
-                  <div className="flex items-center gap-2 text-gray-400 font-body text-sm mb-4">
-                    <FiMapPin size={14} />
-                    <span>{property.location}</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-gray-400 font-body text-sm">
+                      <FiMapPin size={14} />
+                      <span>{property.location}</span>
+                    </div>
+                    {/* Open in Maps button — top right of location header */}
+                    {property.mapLink && (
+                      <a
+                        href={property.mapLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-body text-xs font-semibold px-3 py-1.5 rounded-lg transition-all"
+                        style={{
+                          background: '#fff',
+                          border: '1.5px solid #CBA135',
+                          color: '#CBA135',
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.background = '#CBA135'
+                          e.currentTarget.style.color = '#fff'
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.background = '#fff'
+                          e.currentTarget.style.color = '#CBA135'
+                        }}
+                      >
+                        <FiExternalLink size={12} />
+                        Open in Maps
+                      </a>
+                    )}
                   </div>
                 </div>
+
                 {/* Map Embed */}
                 <div className="relative" style={{ height: 340 }}>
                   <iframe
@@ -128,6 +155,8 @@ export default function PropertyDetail() {
                     referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
+
+                {/* Open in Google Maps — bottom link */}
                 {property.mapLink && (
                   <div className="px-7 py-4">
                     <a href={property.mapLink} target="_blank" rel="noopener noreferrer"
