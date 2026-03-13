@@ -26,7 +26,7 @@ export default function PropertyDetail() {
     <main>
       {/* ── Hero Banner ── */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden"
-        style={{ background: '#0B1F22' }}>
+        style={{ background: '#0F1A2A' }}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <img src={property.image} alt={property.name}
@@ -147,7 +147,7 @@ export default function PropertyDetail() {
 
               {/* Info Card */}
               <div className="rounded-2xl p-6 text-white"
-                style={{ background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)', border: '1px solid rgba(203,161,53,0.2)' }}>
+                style={{ background: 'linear-gradient(135deg, #1E4D8F, #0F1A2A)', border: '1px solid rgba(74,111,165,0.25)' }}>
                 <p className="section-tag mb-1">Price</p>
                 <p className="font-heading text-2xl font-bold text-white mb-4">{property.price}</p>
                 <div className="space-y-3 text-sm font-body">

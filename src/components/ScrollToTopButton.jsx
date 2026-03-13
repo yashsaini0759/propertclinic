@@ -36,16 +36,16 @@ export default function ScrollToTopButton() {
                         width: 46,
                         height: 46,
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #0F3D3E, #1C5A5B)',
-                        border: '1.5px solid rgba(203,161,53,0.5)',
-                        color: '#CBA135',
+                        background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)',
+                        border: '1.5px solid rgba(74,111,165,0.6)',
+                        color: '#fff',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         cursor: 'pointer',
-                        boxShadow: '0 4px 20px rgba(15,61,62,0.5)',
+                        boxShadow: '0 4px 20px rgba(30,77,143,0.45)',
                     }}
-                    whileHover={{ scale: 1.12, boxShadow: '0 0 20px rgba(203,161,53,0.45)' }}
+                    whileHover={{ scale: 1.12, boxShadow: '0 0 20px rgba(74,111,165,0.6)' }}
                     whileTap={{ scale: 0.92 }}
                 >
                     <FiArrowUp size={20} strokeWidth={2.5} />

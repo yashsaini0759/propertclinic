@@ -10,10 +10,10 @@ export default function Properties() {
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #0F3D3E, #0B1F22)' }}
+                style={{ background: '#0F1A2A' }}
             >
                 <div className="absolute inset-0 opacity-10"
-                    style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #CBA135 0%, transparent 50%)' }}
+                    style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #1E4D8F 0%, transparent 50%)' }}
                 />
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -24,9 +24,9 @@ export default function Properties() {
                     <p className="section-tag mb-4">Our Portfolio</p>
                     <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mb-5">
                         Premium{' '}
-                        <span className="italic" style={{ color: '#CBA135' }}>Properties</span>
+                        <span className="italic font-bold text-[#4A6FA5]">Properties</span>
                     </h1>
-                    <div className="gold-divider mx-auto mb-6" />
+                    <div className="accent-divider mx-auto mb-6" />
                     <p className="text-white/60 font-body max-w-xl mx-auto text-lg">
                         Discover our diverse portfolio of residential and commercial properties across Kashipur.
                     </p>
