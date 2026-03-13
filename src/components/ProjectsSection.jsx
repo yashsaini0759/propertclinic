@@ -1,32 +1,33 @@
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FiExternalLink } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 
 const projects = [
     {
-        name: 'JANNAT VILLAS',
+        name: 'Jannat Villas',
         description:
-            'Welcome to Jannat Villas, where luxury meets tranquility. Nestled in a serene environment, these premium villas are designed to provide an extraordinary living experience.',
+            'Where luxury meets tranquility. Nestled in a serene environment, these premium villas are designed to provide an extraordinary living experience with world-class amenities.',
         image: '/images/project_jannat_villas.png',
-        link: 'https://kashipropertyclinic.com/jannat-villas',
+        slug: 'jannat-villas',
         badge: 'Premium Villas',
         location: 'Kashipur, Uttarakhand',
     },
     {
-        name: 'VEDANTA HEIGHTS',
+        name: 'Vedanta Heights',
         description:
             'Vedanta Heights is a residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside.',
         image: '/images/project_vedanta_heights.png',
-        link: 'https://kashipropertyclinic.com/vedanta-heights',
+        slug: 'vedanta-heights',
         badge: 'Luxury Residences',
         location: 'Kashipur, Uttarakhand',
     },
     {
-        name: 'VEDANTA GREENS',
+        name: 'Vedanta Greens',
         description:
-            'Being modeled into perfection, Vedanta Greens is a residential development in a stellar location near the market area with 2BHK and 3BHK villas.',
+            'A residential development in a stellar location near the market area with well-crafted 2BHK and 3BHK villas surrounded by lush greenery.',
         image: '/images/project_vedanta_greens.png',
-        link: 'https://kashipropertyclinic.com/vedanta-greens',
+        slug: 'vedanta-greens',
         badge: '2 & 3 BHK Villas',
         location: 'Kashipur, Uttarakhand',
     },
@@ -103,14 +104,12 @@ export default function ProjectsSection() {
                                 </p>
 
                                 {/* View Button */}
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn-primary w-full text-center text-sm flex items-center justify-center gap-2 mt-auto"
+                                <Link
+                                    to={`/property/${project.slug}`}
+                                    className="btn-gold w-full text-center text-sm flex items-center justify-center gap-2 mt-auto"
                                 >
-                                    View Project <FiExternalLink size={16} />
-                                </a>
+                                    View Project <FiArrowRight size={16} />
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

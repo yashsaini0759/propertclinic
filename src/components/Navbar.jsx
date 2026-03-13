@@ -42,7 +42,7 @@ export default function Navbar() {
                         <img
                             src="/images/logo/propertyclinic.avif"
                             alt="Kashi Property Clinic"
-                            className="h-12 w-auto object-contain"
+                            className="h-16 w-auto object-contain"
                             loading="eager"
                         />
                     </Link>
@@ -117,7 +117,7 @@ export default function Navbar() {
                                 <img
                                     src="/images/logo/propertyclinic.avif"
                                     alt="Kashi Property Clinic"
-                                    className="h-10 w-auto object-contain"
+                                    className="h-14 w-auto object-contain"
                                     loading="eager"
                                 />
                             </Link>
