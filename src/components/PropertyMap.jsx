@@ -53,7 +53,7 @@ export default function PropertyMap({ lat, lng, name, location }) {
   const position = [lat, lng]
 
   return (
-    <div style={{ height: '400px', width: '100%', borderRadius: '12px', overflow: 'hidden', zIndex: 0 }}>
+    <div style={{ position: 'relative', height: '400px', width: '100%', borderRadius: '12px', overflow: 'hidden', zIndex: 10 }}>
       <MapContainer
         center={position}
         zoom={16}

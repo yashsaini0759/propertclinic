@@ -82,7 +82,7 @@ export default function Navbar() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.25 }}
-                        className="fixed inset-0 z-40"
+                        className="fixed inset-0 z-[1000]"
                         style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(4px)' }}
                         onClick={() => setMenuOpen(false)}
                     />
@@ -98,7 +98,7 @@ export default function Navbar() {
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
                         transition={{ type: 'spring', stiffness: 300, damping: 32 }}
-                        className="fixed top-0 right-0 bottom-0 z-50 flex flex-col"
+                        className="fixed top-0 right-0 bottom-0 z-[1001] flex flex-col"
                         style={{
                             width: 'min(320px, 85vw)',
                             background: 'rgba(15, 26, 42, 0.97)',
