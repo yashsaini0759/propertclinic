@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -83,6 +84,7 @@ export default function ServicesCards() {
                         autoplay={{ delay: 5000, disableOnInteraction: false }}
                         grabCursor
                         loop
+                        touchStartPreventDefault={false}
                         breakpoints={{
                             768: { slidesPerView: 2 },
                             1024: { slidesPerView: 3 },
@@ -133,12 +135,12 @@ export default function ServicesCards() {
                                         <p className="text-white/70 font-body text-sm leading-relaxed mb-5">
                                             {svc.description}
                                         </p>
-                                        <a
-                                            href={svc.link}
+                                        <Link
+                                            to={svc.link}
                                             className="inline-flex items-center gap-2 text-[#C0392B] font-body font-semibold text-sm group-hover:gap-3 transition-all hover-underline-animation max-w-max"
                                         >
                                             Learn More <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
