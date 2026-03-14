@@ -339,6 +339,35 @@ body {
     font-size: 16px !important;
 }
 
+/* --- Mobile Specific Arrow Placement --- */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto !important;
+    bottom: 25px !important;
+    transform: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    background: rgba(15, 26, 42, 0.85) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  
+  .swiper-button-prev {
+      left: 20px !important;
+  }
+  
+  .swiper-button-next {
+      right: 20px !important;
+  }
+
+  /* Make sure internal icon scales down */
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+      font-size: 14px !important;
+  }
+}
+
 /* Base input focus state */
 input:focus,
 textarea:focus,

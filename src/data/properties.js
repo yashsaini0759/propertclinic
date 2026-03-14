@@ -58,7 +58,9 @@ export const properties = [
     badge: '2 & 3 BHK',
     type: 'Residential',
     location: 'Kashipur, Uttarakhand',
-    image: '/images/project_vedanta_greens.png',
+    image: '/images/vedanta_greens/hero_face.png',
+    bannerImage: '/images/vedanta_greens/vedanta_Banner.jpg',
+    videoId: '1173523669', // Vimeo Video ID
     brochure: 'https://assets.zyrosite.com/mP42OG07MzUooVkq/vedanta-greens-3-m2Wa9E47PetrvxOM.pdf',
     mapLink: 'https://www.google.com/maps?q=29.193316,78.954278',
     lat: 29.193316,

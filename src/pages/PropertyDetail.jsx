@@ -6,6 +6,7 @@ import { getPropertyBySlug } from '../data/properties'
 import Footer from '../components/Footer'
 import PropertyMap from '../components/PropertyMap'
 import SEO from '../components/SEO'
+import PropertyVideo from '../components/PropertyVideo'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
@@ -37,7 +38,7 @@ export default function PropertyDetail() {
         style={{ background: '#0F1A2A' }}>
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src={property.image} alt={property.name}
+          <img src={property.bannerImage || property.image} alt={property.name}
             className="w-full h-full object-cover object-center" loading="eager" />
           <div className="absolute inset-0"
             style={{ background: 'linear-gradient(180deg, rgba(11,31,34,0.35) 0%, rgba(11,31,34,0.92) 100%)' }} />
@@ -184,6 +185,13 @@ export default function PropertyDetail() {
                   </div>
                 )}
               </motion.div>
+
+              {/* VIDEO COMPONENT */}
+              <PropertyVideo 
+                videoId={property.videoId} 
+                heading="Experience the Property" 
+                slogan="Take a virtual tour of your future home" 
+              />
 
             </div>
 
