@@ -221,7 +221,7 @@ export default function Contact() {
                             {/* Google Map Embed */}
                             <div className="rounded-3xl overflow-hidden shadow-luxury flex-1" style={{ minHeight: 320 }}>
                                 <iframe
-                                    src="https://maps.google.com/maps?q=2nd+Floor+Spectrum+Mall+Cheema+Chauraha+Kashipur+Uttarakhand+244713&output=embed"
+                                    src="https://maps.google.com/maps?q=Spectrum+Shopping+Complex+Kashipur&z=17&output=embed"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, minHeight: 320 }}
@@ -253,7 +253,7 @@ export default function Contact() {
                                             Kashipur, Uttarakhand 244713
                                         </p>
                                         <a
-                                            href="https://maps.app.goo.gl/NhSp9q1odoMBohWHA"
+                                            href="https://maps.app.goo.gl/huJKyojhN63wyXBa8"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center gap-1.5 mt-3 text-[#4A6FA5] text-sm font-body font-semibold hover:gap-2.5 transition-all"
