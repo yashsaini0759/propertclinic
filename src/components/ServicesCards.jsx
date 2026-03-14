@@ -133,7 +133,12 @@ export default function ServicesCards() {
                                         <p className="text-white/70 font-body text-sm leading-relaxed mb-5">
                                             {svc.description}
                                         </p>
-
+                                        <a
+                                            href={svc.link}
+                                            className="inline-flex items-center gap-2 text-[#C0392B] font-body font-semibold text-sm group-hover:gap-3 transition-all hover-underline-animation max-w-max"
+                                        >
+                                            Learn More <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+                                        </a>
                                     </div>
                                 </div>
                             </SwiperSlide>
