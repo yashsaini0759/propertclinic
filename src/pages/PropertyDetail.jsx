@@ -47,7 +47,7 @@ export default function PropertyDetail() {
         <motion.div
           initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute top-28 left-4 sm:left-8 flex items-center gap-3 z-50 pointer-events-auto"
+          className="absolute top-36 md:top-40 left-4 sm:left-8 flex items-center gap-3 z-50 pointer-events-auto"
         >
           <Link to="/properties"
             className="flex items-center gap-1.5 text-white/70 hover:text-[#CBA135] text-sm font-body transition-colors">
