@@ -33,13 +33,13 @@ export default function InstagramSection() {
                     </h2>
                     <div className="accent-divider mx-auto mb-5" />
                     <a
-                        href="https://www.instagram.com/kashipropertyclinic"
+                        href="https://www.instagram.com/property_clinic_kashipur/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-[#4A6FA5] font-body font-semibold hover:text-[#1E4D8F] transition-colors"
                     >
                         <FaInstagram size={18} />
-                        @kashipropertyclinic
+                        @property_clinic_kashipur
                     </a>
                 </motion.div>
 
@@ -48,7 +48,7 @@ export default function InstagramSection() {
                     {gridImages.map((img, i) => (
                         <motion.a
                             key={i}
-                            href="https://www.instagram.com/kashipropertyclinic"
+                            href="https://www.instagram.com/property_clinic_kashipur/"
                             target="_blank"
                             rel="noopener noreferrer"
                             initial={{ opacity: 0, scale: 0.9 }}

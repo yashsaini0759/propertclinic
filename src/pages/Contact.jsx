@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { MdEmail, MdPhone, MdLocationOn, MdAccessTime } from 'react-icons/md'
 import { FaWhatsapp } from 'react-icons/fa'
 import Footer from '../components/Footer'
+import SEO from '../components/SEO'
 
 const contactCards = [
     {
@@ -52,6 +53,11 @@ export default function Contact() {
 
     return (
         <main>
+            <SEO 
+                title="Contact Us" 
+                description="Get in touch with Kashi Property Clinic for expert real estate guidance and seamless property solutions in Kashipur."
+                url="https://kashipropertyclinic.com/contact" 
+            />
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"
@@ -221,7 +227,7 @@ export default function Contact() {
                             {/* Google Map Embed */}
                             <div className="rounded-3xl overflow-hidden shadow-luxury flex-1" style={{ minHeight: 320 }}>
                                 <iframe
-                                    src="https://maps.google.com/maps?q=Spectrum+Shopping+Complex+Kashipur&z=17&output=embed"
+                                    src="https://maps.google.com/maps?q=Kashi+Property+Clinic+Kashipur&z=17&output=embed"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, minHeight: 320 }}

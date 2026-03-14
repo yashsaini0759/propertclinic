@@ -5,6 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { getPropertyBySlug } from '../data/properties'
 import Footer from '../components/Footer'
 import PropertyMap from '../components/PropertyMap'
+import SEO from '../components/SEO'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
@@ -14,6 +15,7 @@ export default function PropertyDetail() {
     return (
       <main className="min-h-screen flex flex-col items-center justify-center"
         style={{ background: '#0B1F22' }}>
+        <SEO title="Property Not Found" description="The requested property could not be found." />
         <p className="text-white text-xl font-body mb-6">Property not found.</p>
         <Link to="/properties" className="btn-gold">← Back to Properties</Link>
       </main>
@@ -24,6 +26,12 @@ export default function PropertyDetail() {
 
   return (
     <main>
+      <SEO 
+        title={property.name} 
+        description={`Explore ${property.name} in ${property.location}. ${property.description}`}
+        image={`https://kashipropertyclinic.com${property.image}`}
+        url={`https://kashipropertyclinic.com/property/${slug}`}
+      />
       {/* ── Hero Banner ── */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden"
         style={{ background: '#0F1A2A' }}>
@@ -39,7 +47,7 @@ export default function PropertyDetail() {
         <motion.div
           initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute top-28 left-4 sm:left-8 flex items-center gap-3 z-10"
+          className="absolute top-28 left-4 sm:left-8 flex items-center gap-3 z-50 pointer-events-auto"
         >
           <Link to="/properties"
             className="flex items-center gap-1.5 text-white/70 hover:text-[#CBA135] text-sm font-body transition-colors">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kashipropertyclinic.com/sitemap.xml

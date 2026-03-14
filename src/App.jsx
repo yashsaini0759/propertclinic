@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Navbar from './components/Navbar'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import ScrollProgress from './components/ScrollProgress'
@@ -27,7 +28,8 @@ function ScrollToTop() {
 
 function App() {
     return (
-        <Router>
+        <HelmetProvider>
+            <Router>
             <ScrollToTop />
             <ScrollProgress />
             <Navbar />
@@ -41,6 +43,7 @@ function App() {
             <FloatingWhatsApp />
             <ScrollToTopButton />
         </Router>
+        </HelmetProvider>
     )
 }
 

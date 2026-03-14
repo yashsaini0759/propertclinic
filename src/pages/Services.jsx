@@ -3,6 +3,7 @@ import { MdApartment, MdGavel, MdAccountBalance, MdSearch } from 'react-icons/md
 import ComprehensiveServices from '../components/ComprehensiveServices'
 import Footer from '../components/Footer'
 import { FiArrowRight } from 'react-icons/fi'
+import SEO from '../components/SEO'
 
 const serviceDetails = [
     {
@@ -34,6 +35,11 @@ const serviceDetails = [
 export default function Services() {
     return (
         <main>
+            <SEO 
+                title="Real Estate Services" 
+                description="Discover our comprehensive real estate services in Kashipur, including property management, legal transactions, home loans, and property search."
+                url="https://kashipropertyclinic.com/services" 
+            />
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"

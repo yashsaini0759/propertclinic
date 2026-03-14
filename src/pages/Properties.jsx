@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import { properties } from '../data/properties'
 import Footer from '../components/Footer'
+import SEO from '../components/SEO'
 
 export default function Properties() {
     return (
         <main>
+            <SEO 
+                title="Exclusive Properties" 
+                description="Explore our curated selection of premium residential and commercial properties in Kashipur."
+                url="https://kashipropertyclinic.com/properties" 
+            />
             {/* Hero */}
             <section
                 className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"

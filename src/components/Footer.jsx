@@ -47,8 +47,8 @@ export default function Footer() {
                         {/* Social Links */}
                         <div className="flex gap-3">
                             {[
-                                { icon: <FaFacebook size={18} />, href: 'https://www.facebook.com/kashipropertyclinic', label: 'Facebook' },
-                                { icon: <FaInstagram size={18} />, href: 'https://www.instagram.com/kashipropertyclinic', label: 'Instagram' },
+                                { icon: <FaFacebook size={18} />, href: 'https://www.facebook.com/PropertyClinicKashipur/', label: 'Facebook' },
+                                { icon: <FaInstagram size={18} />, href: 'https://www.instagram.com/property_clinic_kashipur/', label: 'Instagram' },
                                 { icon: <FaWhatsapp size={18} />, href: 'https://wa.me/9627088818', label: 'WhatsApp' },
                             ].map((social) => (
                                 <a
@@ -113,27 +113,6 @@ export default function Footer() {
                             <div className="flex items-start gap-3 text-white/50 text-sm font-body">
                                 <span className="text-[#C0392B] mt-0.5 flex-shrink-0">⏰</span>
                                 <span>Mon – Sat: 9 AM – 5 PM</span>
-                            </div>
-                        </div>
-
-                        {/* Email Subscription */}
-                        <div>
-                            <p className="text-white/70 text-xs font-body tracking-wide mb-3 uppercase">Newsletter</p>
-                            <div className="flex gap-2">
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Your email…"
-                                    className="flex-1 px-3 py-2 rounded-lg text-sm font-body text-white placeholder-white/30 bg-white/5 border border-white/10 focus:outline-none focus:border-[#4A6FA5]/50 transition-colors"
-                                />
-                                <button
-                                    className="px-4 py-2 rounded-lg text-sm font-body font-semibold transition-all hover:-translate-y-0.5"
-                                    style={{ background: 'linear-gradient(135deg, #1E4D8F, #4A6FA5)', color: '#FFFFFF' }}
-                                    onClick={() => setEmail('')}
-                                >
-                                    →
-                                </button>
                             </div>
                         </div>
                     </div>
