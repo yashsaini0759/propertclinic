@@ -8,7 +8,7 @@ const gridImages = [
     { src: '/images/service_property_mgmt.png', alt: 'Property Management' },
     { src: '/images/project_vedanta_heights.png', alt: 'Vedanta Heights' },
     { src: '/images/hero_property.png', alt: 'Luxury Property' },
-    { src: '/images/project_vedanta_greens.png', alt: 'Vedanta Greens' },
+    { src: '/images/vedanta_greens/hero_face.png', alt: 'Vedanta Greens' },
     { src: '/images/service_legal.png', alt: 'Legal Services' },
     { src: '/images/service_homeloan.png', alt: 'Home Loan' },
     { src: '/images/project_jannat_villas.png', alt: 'Premium Villas' },

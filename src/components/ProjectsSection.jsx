@@ -26,7 +26,7 @@ const projects = [
         name: 'Vedanta Greens',
         description:
             'A residential development in a stellar location near the market area with well-crafted 2BHK and 3BHK villas surrounded by lush greenery.',
-        image: '/images/project_vedanta_greens.png',
+        image: '/images/vedanta_greens/hero_face.png',
         slug: 'vedanta-greens',
         badge: '2 & 3 BHK Villas',
         location: 'Kashipur, Uttarakhand',
