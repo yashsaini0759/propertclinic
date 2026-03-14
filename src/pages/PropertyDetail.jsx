@@ -4,6 +4,7 @@ import { FiArrowLeft, FiMapPin, FiExternalLink, FiDownload, FiCheckCircle } from
 import { FaWhatsapp } from 'react-icons/fa'
 import { getPropertyBySlug } from '../data/properties'
 import Footer from '../components/Footer'
+import PropertyMap from '../components/PropertyMap'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
@@ -145,16 +146,25 @@ export default function PropertyDetail() {
                 </div>
 
                 {/* Map Embed */}
-                <div className="relative" style={{ height: 340 }}>
-                  <iframe
-                    src={property.mapEmbed}
-                    width="100%" height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen loading="lazy"
-                    title={`${property.name} Location Map`}
-                    referrerPolicy="no-referrer-when-downgrade"
+                {property.lat && property.lng ? (
+                  <PropertyMap 
+                    lat={property.lat} 
+                    lng={property.lng} 
+                    name={property.name} 
+                    location={property.location} 
                   />
-                </div>
+                ) : (
+                  <div className="relative" style={{ height: 340 }}>
+                    <iframe
+                      src={property.mapEmbed}
+                      width="100%" height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen loading="lazy"
+                      title={`${property.name} Location Map`}
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                )}
 
                 {/* Open in Google Maps — bottom link */}
                 {property.mapLink && (

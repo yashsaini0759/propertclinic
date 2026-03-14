@@ -40,9 +40,9 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center group">
                         <img
-                            src="/images/logo/propertyclinic.avif"
+                            src="/images/logo/property_clinic_main_logo.png"
                             alt="Kashi Property Clinic"
-                            className="h-16 w-auto object-contain"
+                            className="h-20 md:h-24 w-auto object-contain"
                             loading="eager"
                         />
                     </Link>
@@ -115,9 +115,9 @@ export default function Navbar() {
                         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/10">
                             <Link to="/" onClick={() => setMenuOpen(false)}>
                                 <img
-                                    src="/images/logo/propertyclinic.avif"
+                                    src="/images/logo/property_clinic_main_logo.png"
                                     alt="Kashi Property Clinic"
-                                    className="h-14 w-auto object-contain"
+                                    className="h-20 w-auto object-contain"
                                     loading="eager"
                                 />
                             </Link>

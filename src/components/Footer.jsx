@@ -35,9 +35,9 @@ export default function Footer() {
                         {/* Logo */}
                         <Link to="/" className="flex items-center mb-5 w-fit">
                             <img
-                                src="/images/logo/propertyclinic.avif"
+                                src="/images/logo/property_clinic_main_logo.png"
                                 alt="Kashi Property Clinic"
-                                className="h-12 w-auto object-contain"
+                                className="h-24 w-auto object-contain"
                                 loading="lazy"
                             />
                         </Link>
