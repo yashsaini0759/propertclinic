@@ -13,15 +13,15 @@ import SEO from '../components/SEO'
 export default function Home() {
     return (
         <main>
-            <SEO 
-                title="Premium Real Estate Solutions in Kashipur" 
+            <SEO
+                title="Premium Real Estate Solutions in Kashipur"
                 description="Your trusted partner for premium real estate in Kashipur. Providing comprehensive solutions for property search, legal transactions, home loans, and management services since 2018."
-                url="https://kashipropertyclinic.com/" 
+                url="https://kashipropertyclinic.com/"
             />
             <HeroSection />
             <JourneySection />
-            <ServicesCards />
             <ProjectsSection />
+            <ServicesCards />
             <AboutSection />
             <StatsSection />
             <ComprehensiveServices />
