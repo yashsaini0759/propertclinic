@@ -19,7 +19,7 @@ export const properties = [
     maps: [
       { title: '3 BHK', src: '/images/vedanta_greens/VEDANTA GREENS 3BHK.jpg' },
       { title: '4 BHK', src: '/images/vedanta_greens/VEDANTA GREENS 4 BHK.jpg' },
-      { title: 'Street Map', src: '/images/vedanta_greens/VEDANTA GREENS Map.jpg' },
+      { title: 'Site Map', src: '/images/vedanta_greens/VEDANTA GREENS Map.jpg' },
     ],
     description: 'A premium residential development set in a stellar location near the market area, offering thoughtfully designed 3 BHK and 4 BHK villas surrounded by lush greenery. Vedanta Greens delivers the perfect blend of spacious living, urban convenience, and natural serenity — a home where your family can grow, breathe, and truly thrive.',
     highlights: [
@@ -66,16 +66,16 @@ export const properties = [
     badge: 'Luxury Residences',
     type: 'Residential',
     location: 'Kashipur, Uttarakhand',
-    image: '/images/project_vedanta_heights.png',
+    image: '/images/vedanta_heights/VEDANTA HEIGHTS HERO FACE.png',
     bannerImage: '/images/vedanta_heights/vedanta_heights_hero_banner.png',
     brochure: 'https://assets.zyrosite.com/mP42OG07MzUooVkq/vedanta-brochure-rgb-A3QOGNkBn7iwkzW7.pdf',
     mapLink: 'https://www.google.com/maps?q=29.2109,78.9621',
     lat: 29.2109,
     lng: 78.9621,
     mapEmbed: 'https://maps.google.com/maps?q=29.2109,78.9621&z=16&output=embed',
-    description: 'A residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside. Vedanta Heights stands as a symbol of sophisticated living — where premium architecture, well-planned spaces, and top-tier amenities come together to create a truly exceptional lifestyle.',
+    description: 'A residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside. Vedanta Heights stands as a symbol of sophisticated living — where premium architecture, well-planned spaces, and top-tier amenities come together to create a truly exceptional lifestyle with 4 BHK luxury apartments.',
     highlights: [
-      '2 BHK & 3 BHK Luxury Apartments',
+      '2, 3 & 4 BHK Luxury Apartments',
       'Rooftop garden with panoramic views',
       'Modular kitchen and premium fittings',
       'Covered parking and visitor parking',
@@ -102,7 +102,7 @@ export const properties = [
     maps: [
       { title: '3 BHK', src: '/images/VEDANTA ELITE  (1)/VEDANTA ELITE 3 BHK.jpg' },
       { title: '4 BHK', src: '/images/VEDANTA ELITE  (1)/VEDANTA ELITE 4 BHK.jpg' },
-      { title: 'Street Map', src: '/images/VEDANTA ELITE  (1)/VEDANTA ELITE STREET MAP.jpg' },
+      { title: 'Site Map', src: '/images/VEDANTA ELITE  (1)/VEDANTA ELITE STREET MAP.jpg' },
     ],
     description: 'Vedanta Elite represents the pinnacle of luxury living — a signature residential project for those who settle for nothing less than the best. World-class architecture, premium interiors, and an unparalleled suite of amenities define this iconic development.',
     highlights: [
@@ -164,7 +164,7 @@ export const properties = [
     maps: [
       { title: 'Villa Type 1', src: '/images/vedanta_residency/VEDANTA RESIDENCY VILLA TYPE 1.jpg' },
       { title: 'Villa Type 2', src: '/images/vedanta_residency/VEDANTA RESIDENCY VILLA TYPE 2.jpg' },
-      { title: 'Street Map', src: '/images/vedanta_residency/VEDANTA RESIDENCY STREET MAP.jpg' },
+      { title: 'Site Map', src: '/images/vedanta_residency/VEDANTA RESIDENCY STREET MAP.jpg' },
     ],
     description: 'Vedanta Residency is a premium apartment complex designed for families seeking comfort, convenience, and community. With thoughtfully designed spaces, modern amenities, and a serene environment, it offers the perfect retreat from the busy world.',
     highlights: [
@@ -193,7 +193,7 @@ export const properties = [
     lng: 78.940289,
     mapEmbed: 'https://maps.google.com/maps?q=29.211045,78.940289&z=16&output=embed',
     maps: [
-      { title: 'Street Map', src: '/images/urban_bazar/URBAN BAZAR BY VEDANTA STREET MAP.jpg' },
+      { title: 'Site Map', src: '/images/urban_bazar/URBAN BAZAR BY VEDANTA STREET MAP.jpg' },
     ],
     description: 'Urban Bazar by Vedanta is a vibrant commercial destination that redefines the shopping and dining experience in Kashipur. With a dynamic mix of retail outlets, F&B zones, and business spaces, it is the go-to hub for entrepreneurs and investors.',
     highlights: [
@@ -222,7 +222,7 @@ export const properties = [
     lng: 78.9513,
     mapEmbed: 'https://maps.google.com/maps?q=29.2119,78.9513&z=16&output=embed',
     maps: [
-      { title: 'Street Map', src: '/images/vedanta_highstreets/HIGHSTREET BY VEDANTA STREET MAP.jpg' },
+      { title: 'Site Map', src: '/images/vedanta_highstreets/HIGHSTREET BY VEDANTA STREET MAP.jpg' },
       { title: 'Basement', src: '/images/vedanta_highstreets/HIGHSTREET BY VEDANTA BASEMENT MAP.jpg' },
       { title: '1st / 2nd / 3rd Floor', src: '/images/vedanta_highstreets/HIGHSTREET BY VEDANTA FIRST AND SECOND AND THIRD.jpg' },
     ],

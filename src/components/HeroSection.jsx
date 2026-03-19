@@ -30,7 +30,7 @@ const slides = [
         name: 'Vedanta Heights',
         tagline: 'Premium Residences',
         slogan: 'Live the life\nyou\'ve always imagined.',
-        description: 'Elegantly crafted residences that set the highest standard for luxury living in Kashipur.',
+        description: 'Elegantly crafted 4 BHK luxury residences that set the highest standard for luxury living in Kashipur.',
         location: 'Kashipur, Uttarakhand',
         image: '/images/vedanta_heights/vedanta_heights_hero_banner.png',
         slug: 'vedanta-heights',
@@ -98,7 +98,7 @@ export default function HeroSection() {
     const slide = slides[current]
 
     return (
-        <section className="relative w-full overflow-hidden" style={{ height: '100vh', minHeight: 560 }}>
+        <section className="relative w-full overflow-hidden h-[86vh] md:h-screen" style={{ minHeight: 500 }}>
 
             {/* ── Full-width background image ── */}
             <AnimatePresence>
@@ -134,7 +134,7 @@ export default function HeroSection() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-                        className="w-full max-w-[440px] md:rounded-2xl overflow-hidden mt-20 lg:mt-0 md:bg-white/5 md:backdrop-blur-[18px]"
+                        className="w-full max-w-[440px] md:rounded-2xl overflow-hidden mt-12 lg:mt-0 md:bg-white/5 md:backdrop-blur-[18px]"
                     >
                         {/* Red top accent strip — hidden on mobile */}
                         <div className="hidden md:block h-[3px] w-full" style={{ background: 'linear-gradient(90deg, #C0392B, #E74C3C)' }} />
