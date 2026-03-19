@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Link from './TransitionLink'
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
 import { properties } from '../data/properties'

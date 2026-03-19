@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from './TransitionLink'
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md'
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 

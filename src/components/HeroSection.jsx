@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import Link from './TransitionLink'
 
 const slides = [
     {

@@ -1,4 +1,5 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import Link from '../components/TransitionLink'
 import { motion } from 'framer-motion'
 import { FiArrowLeft, FiMapPin, FiExternalLink, FiDownload, FiCheckCircle } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'

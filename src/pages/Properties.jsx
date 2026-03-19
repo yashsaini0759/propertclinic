@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import Link from '../components/TransitionLink'
 import { FiArrowRight } from 'react-icons/fi'
 import { properties } from '../data/properties'
 import Footer from '../components/Footer'

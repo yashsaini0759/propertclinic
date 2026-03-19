@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import Link from './TransitionLink'
 import { MdApartment, MdGavel, MdAccountBalance, MdSearch } from 'react-icons/md'
 
 const services = [
