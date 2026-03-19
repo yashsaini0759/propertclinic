@@ -19,13 +19,6 @@ import PropertyDetail from './pages/PropertyDetail'
 
 function AnimatedRoutes() {
     const location = useLocation()
-    const navType = useNavigationType()
-
-    useEffect(() => {
-        // Only trigger nprogress natively if the user hits the browser Back/Forward (POP) buttons.
-        // For all standard clicks and programmatic intent, useGlobalNavigate governs the exact start.
-        if (navType === 'POP') nprogress.start()
-    }, [location.pathname, navType])
 
     return (
         <AnimatePresence mode="wait">
