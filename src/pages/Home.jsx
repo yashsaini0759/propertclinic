@@ -20,10 +20,10 @@ export default function Home() {
             />
             <HeroSection />
             <JourneySection />
-            <ProjectsSection />
             <ServicesCards />
-            <StatsSection />
+            <ProjectsSection />
             <AboutSection />
+            <StatsSection />
             <ComprehensiveServices />
             <TestimonialsSection />
             <InstagramSection />

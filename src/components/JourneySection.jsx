@@ -41,7 +41,7 @@ export default function JourneySection() {
     })
 
     return (
-        <section ref={containerRef} className="relative py-24 px-4 sm:px-6 overflow-hidden" style={{ background: '#F8F9FA' }}>
+        <section ref={containerRef} className="relative py-16 px-4 sm:px-6 overflow-hidden" style={{ background: 'rgba(194, 240, 255, 0.15)' }}>
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
                 <motion.div

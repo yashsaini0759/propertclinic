@@ -33,7 +33,7 @@ const services = [
 export default function ComprehensiveServices() {
     return (
         <section
-            className="py-24 px-4 sm:px-6"
+            className="py-16 px-4 sm:px-6"
             style={{ background: 'linear-gradient(180deg, #0F1A2A 0%, #172840 100%)' }}
         >
             <div className="max-w-7xl mx-auto">

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { MdApartment, MdGavel, MdAccountBalance, MdSearch } from 'react-icons/md'
-import ComprehensiveServices from '../components/ComprehensiveServices'
+import StatsSection from '../components/StatsSection'
 import Footer from '../components/Footer'
 import { FiArrowRight } from 'react-icons/fi'
 import SEO from '../components/SEO'
@@ -42,14 +42,18 @@ export default function Services() {
             />
             {/* Hero */}
             <section
-                className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden"
-                style={{ background: '#0F1A2A' }}
+                className="relative pt-32 pb-20 px-4 sm:px-6 flex items-center justify-center min-h-[50vh] overflow-hidden bg-[#0F1A2A]"
             >
-                <div className="absolute inset-0 opacity-10"
-                    style={{
-                        backgroundImage: 'radial-gradient(circle at 30% 50%, #1E4D8F 0%, transparent 50%), radial-gradient(circle at 70% 50%, #C0392B 0%, transparent 50%)',
-                    }}
-                />
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/images/Banner/Services_BANNER.png"
+                        alt="Our Services Background"
+                        className="w-full h-full object-cover object-center"
+                    />
+                    {/* Dark shade from left so white text is readable, but image isn't fully covered */}
+                    <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(15, 26, 42, 0.85) 0%, rgba(15, 26, 42, 0.5) 60%, transparent 100%)' }} />
+                </div>
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -123,7 +127,7 @@ export default function Services() {
                 </div>
             </section>
 
-            <ComprehensiveServices />
+            <StatsSection />
             <Footer />
         </main>
     )

@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import PropertyMap from '../components/PropertyMap'
 import SEO from '../components/SEO'
 import PropertyVideo from '../components/PropertyVideo'
+import FloorPlansGallery from '../components/FloorPlansGallery'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
@@ -95,6 +96,14 @@ export default function PropertyDetail() {
                 <div className="gold-divider mb-5" />
                 <p className="text-gray-500 font-body leading-relaxed">{property.description}</p>
               </motion.div>
+
+              {/* FLOOR PLANS & MAPS — right after About */}
+              {property.maps && property.maps.length > 0 && (
+                <FloorPlansGallery
+                  maps={property.maps}
+                  heading="Floor Plans & Maps"
+                />
+              )}
 
               {/* Highlights */}
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}

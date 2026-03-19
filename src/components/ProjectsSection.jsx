@@ -1,119 +1,149 @@
-import { useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowRight } from 'react-icons/fi'
+import { properties } from '../data/properties'
 
-const projects = [
-    {
-        name: 'Jannat Villas',
-        description:
-            'Where luxury meets tranquility. Nestled in a serene environment, these premium villas are designed to provide an extraordinary living experience with world-class amenities.',
-        image: '/images/project_jannat_villas.png',
-        slug: 'jannat-villas',
-        badge: 'Premium Villas',
-        location: 'Kashipur, Uttarakhand',
-    },
-    {
-        name: 'Vedanta Heights',
-        description:
-            'Vedanta Heights is a residential development elegantly crafted to offer the highest level of luxury, both inside as well as outside.',
-        image: '/images/project_vedanta_heights.png',
-        slug: 'vedanta-heights',
-        badge: 'Luxury Residences',
-        location: 'Kashipur, Uttarakhand',
-    },
-    {
-        name: 'Vedanta Greens',
-        description:
-            'A residential development in a stellar location near the market area with well-crafted 2BHK and 3BHK villas surrounded by lush greenery.',
-        image: '/images/vedanta_greens/hero_face.png',
-        slug: 'vedanta-greens',
-        badge: '2 & 3 BHK Villas',
-        location: 'Kashipur, Uttarakhand',
-    },
-]
+const topRowSlugs = ['vedanta-greens', 'vedanta-avenue']
+const bottomRowSlugs = ['vedanta-elite', 'vedanta-residency', 'vedanta-heights']
+
+const ProjectCard = ({ project, index, isMobile, fromDirection }) => {
+    return (
+        <motion.div
+            key={project.slug}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ 
+                y: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94], delay: index * 0.1 },
+                opacity: { duration: 0.85, ease: "linear", delay: index * 0.1 }
+            }}
+            className="group bg-white rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(15,31,58,0.12)]"
+            style={{
+                boxShadow: '0 4px 24px rgba(15,31,58,0.07)',
+                border: '1px solid rgba(15,31,58,0.06)',
+            }}
+        >
+            {/* Image */}
+            <div className="relative h-60 overflow-hidden flex-shrink-0">
+                <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                    loading="lazy"
+                />
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Badge */}
+                <div className="absolute top-4 left-4 z-10">
+                    <span
+                        className="px-3 py-1.5 rounded-full text-[11px] font-body font-semibold tracking-wider text-white"
+                        style={{ background: '#0F1F3A', boxShadow: '0 2px 10px rgba(15,31,58,0.3)' }}
+                    >
+                        {project.badge}
+                    </span>
+                </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-7 flex flex-col flex-1 bg-white relative z-10 cursor-pointer" onClick={() => window.location.href = `/property/${project.slug}`}>
+                <h3
+                    className="font-heading text-xl font-bold text-[#0F1F3A] mb-2 transition-colors duration-300 group-hover:text-[#1E4D8F] uppercase tracking-wide"
+                >
+                    {project.name}
+                </h3>
+
+                <div className="flex items-center justify-between mb-5">
+                    <p className="text-[#A07050] text-xs font-body tracking-[0.1em] uppercase block">
+                        📍 {project.location}
+                    </p>
+                    
+                    <Link
+                        to={`/property/${project.slug}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-10 h-10 rounded-full flex items-center justify-center border border-[#D9C4B5] text-[#A07050] transition-colors duration-300 group-hover:bg-[#1E4D8F] group-hover:border-[#1E4D8F] group-hover:text-white shrink-0 relative"
+                    >
+                        {/* Accent line pointing to circle */}
+                        <div className="absolute right-full top-1/2 -translate-y-1/2 w-8 h-[1px] bg-[#D9C4B5] group-hover:bg-[#1E4D8F] transition-colors duration-300" />
+                        <FiArrowRight size={15} className="-mr-0.5" />
+                    </Link>
+                </div>
+
+                <p className="text-[#5A6A80] font-body text-[0.95rem] leading-relaxed flex-1 line-clamp-3">
+                    {project.description}
+                </p>
+            </div>
+        </motion.div>
+    );
+};
 
 export default function ProjectsSection() {
+    const topRowProjects = topRowSlugs.map(slug => properties.find(p => p.slug === slug)).filter(Boolean)
+    const bottomRowProjects = bottomRowSlugs.map(slug => properties.find(p => p.slug === slug)).filter(Boolean)
+
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768)
+        checkMobile() // Initial check
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
     return (
-        <section className="py-24 px-4 sm:px-6 overflow-hidden" style={{ background: '#F8F9FA' }}>
+        <section className="py-16 px-4 sm:px-6 overflow-x-hidden" style={{ background: 'rgba(194, 240, 255, 0.15)' }}>
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-14"
+                    transition={{
+                        y: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
+                        opacity: { duration: 0.85, ease: "linear" }
+                    }}
+                    className="text-center mb-16"
                 >
-                    <p className="section-tag mb-3">Featured Developments</p>
-                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0F1A2A] mb-4">
+                    <p className="section-tag mb-4">Featured Developments</p>
+                    <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0F1F3A] mb-5 leading-tight">
                         Our Premium{' '}
-                        <span className="italic font-bold text-[#1E4D8F]">Projects</span>
+                        <span className="italic text-[#1E4D8F]">Projects</span>
                     </h2>
-                    <div className="accent-divider mx-auto mb-5" />
-                    <p className="text-gray-500 font-body max-w-xl mx-auto">
+                    <span className="luxury-divider mx-auto mb-6" />
+                    <p className="text-[#5A6A80] font-body max-w-xl mx-auto text-[0.95rem] leading-relaxed">
                         Discover our curated selection of luxury residential and commercial developments.
                     </p>
                 </motion.div>
 
-                {/* Projects Grid */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                >
-                    {projects.map((project, i) => (
-                        <motion.div
-                            key={project.name}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.15, duration: 0.6 }}
-                            whileHover={{ y: -8 }}
-                            className="group bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-300 border border-gray-100 flex flex-col"
-                        >
-                            {/* Target Image Half */}
-                            <div className="relative h-64 overflow-hidden img-zoom flex-shrink-0">
-                                <img
-                                    src={project.image}
-                                    alt={project.name}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    loading="lazy"
-                                />
+                {/* Projects Grid Container */}
+                <div className="flex flex-col gap-8">
+                    {/* Top Row Grid (2 Columns) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {topRowProjects.map((project, i) => (
+                            <ProjectCard 
+                                key={project.slug} 
+                                project={project} 
+                                index={i} 
+                                isMobile={isMobile} 
+                                fromDirection="left" 
+                            />
+                        ))}
+                    </div>
 
-                                {/* Badge Overlay */}
-                                <div className="absolute top-4 left-4">
-                                    <span className="px-3 py-1.5 rounded-full text-[11px] font-body font-semibold tracking-wider text-white bg-[#C0392B] shadow-md">
-                                        {project.badge}
-                                    </span>
-                                </div>
-                            </div>
-
-                            {/* Text Description Half */}
-                            <div className="p-7 flex flex-col flex-1">
-                                <p className="text-gray-400 text-xs font-body tracking-widest uppercase mb-2">
-                                    📍 {project.location}
-                                </p>
-                                <h3 className="font-heading text-xl font-bold text-[#0F1A2A] mb-3 group-hover:text-[#1E4D8F] transition-colors">
-                                    {project.name}
-                                </h3>
-                                <p className="text-gray-600 font-body text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
-                                    {project.description}
-                                </p>
-
-                                {/* View Button */}
-                                <Link
-                                    to={`/property/${project.slug}`}
-                                    className="btn-gold w-full text-center text-sm flex items-center justify-center gap-2 mt-auto"
-                                >
-                                    View Project <FiArrowRight size={16} />
-                                </Link>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                    {/* Bottom Row Grid (3 Columns) */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {bottomRowProjects.map((project, i) => (
+                            <ProjectCard 
+                                key={project.slug} 
+                                project={project} 
+                                index={i} 
+                                isMobile={isMobile} 
+                                fromDirection="right" 
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     )
