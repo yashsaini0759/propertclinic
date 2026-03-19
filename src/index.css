@@ -469,3 +469,18 @@ select:focus {
     90% { opacity: 0.3; }
     100% { transform: translateY(-100px) scale(1); opacity: 0; }
 }
+
+/* ─── NProgress overrides ───────────────────────────────────── */
+#nprogress .bar {
+    background: var(--color-blue) !important;
+    height: 3px !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px var(--color-red), 0 0 5px var(--color-blue) !important;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: var(--color-blue) !important;
+    border-left-color: var(--color-blue) !important;
+}

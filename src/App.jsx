@@ -1,15 +1,41 @@
 import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+import { AnimatePresence } from 'framer-motion'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
+import PageTransition from './components/PageTransition'
 import Navbar from './components/Navbar'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import ScrollProgress from './components/ScrollProgress'
+
+nprogress.configure({ showSpinner: false, speed: 400, minimum: 0.2 })
 import ScrollToTopButton from './components/ScrollToTopButton'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import Properties from './pages/Properties'
 import Contact from './pages/Contact'
 import PropertyDetail from './pages/PropertyDetail'
+
+function AnimatedRoutes() {
+    const location = useLocation()
+
+    useEffect(() => {
+        nprogress.start()
+    }, [location.pathname])
+
+    return (
+        <AnimatePresence mode="wait" onExitComplete={() => nprogress.done()}>
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+                <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+                <Route path="/properties" element={<PageTransition><Properties /></PageTransition>} />
+                <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+                <Route path="/property/:slug" element={<PageTransition><PropertyDetail /></PageTransition>} />
+            </Routes>
+        </AnimatePresence>
+    )
+}
 
 function ScrollToTop() {
     const { pathname } = useLocation()
@@ -33,13 +59,7 @@ function App() {
             <ScrollToTop />
             <ScrollProgress />
             <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/properties" element={<Properties />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/property/:slug" element={<PropertyDetail />} />
-            </Routes>
+            <AnimatedRoutes />
             <FloatingWhatsApp />
             <ScrollToTopButton />
         </Router>
