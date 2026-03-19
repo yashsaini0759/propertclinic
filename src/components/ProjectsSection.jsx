@@ -14,11 +14,12 @@ const ProjectCard = ({ project, index, isMobile, fromDirection }) => {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            whileHover={{ y: -8 }}
             transition={{ 
                 y: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94], delay: index * 0.1 },
                 opacity: { duration: 0.85, ease: "linear", delay: index * 0.1 }
             }}
-            className="group bg-white rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(15,31,58,0.12)]"
+            className="group bg-white rounded-2xl overflow-hidden flex flex-col transition-shadow duration-500 hover:shadow-[0_20px_40px_rgba(15,31,58,0.12)]"
             style={{
                 boxShadow: '0 4px 24px rgba(15,31,58,0.07)',
                 border: '1px solid rgba(15,31,58,0.06)',

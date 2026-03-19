@@ -77,7 +77,7 @@ export default function ServicesCards() {
                             whileInView="visible"
                             viewport={{ once: true }}
                             whileHover={{ y: -4 }}
-                            className="flex items-start gap-5 p-6 rounded-2xl bg-white group cursor-default transition-all duration-300"
+                            className="flex items-start gap-5 p-6 rounded-2xl bg-white group cursor-default transition-shadow transition-colors duration-300"
                             style={{
                                 border: '1px solid rgba(15,31,58,0.09)',
                                 boxShadow: '0 2px 16px rgba(15,31,58,0.05)',
