@@ -3,7 +3,60 @@ import { Helmet } from 'react-helmet-async'
 const SITE_NAME = 'Kashi Property Clinic'
 const SITE_URL = 'https://www.kashipropertyclinic.com'
 const DEFAULT_IMAGE = `${SITE_URL}/images/logo/property_clinic_main_logo.png`
-const DEFAULT_KEYWORDS = 'property in Kashipur, real estate Kashipur, buy property Kashipur, villas in Kashipur, plots in Kashipur, flats in Kashipur, Kashi Property Clinic, Kashipur Property Clinic, real estate agent Kashipur, property dealer Kashipur, Uttarakhand real estate'
+const DEFAULT_KEYWORDS = [
+  // Business name variations
+  'Kashi Property Clinic',
+  'Kashipur Property Clinic',
+  'property clinic Kashipur',
+  'Kashi Property Clinic Kashipur',
+  // House/home searches
+  'house in Kashipur',
+  'house for sale in Kashipur',
+  'buy house in Kashipur',
+  'home in Kashipur',
+  'new house Kashipur',
+  // Villa searches
+  'villa in Kashipur',
+  'luxury villa in Kashipur',
+  'villas in Kashipur',
+  'villa for sale Kashipur',
+  'luxury villas Kashipur',
+  // Flat/apartment searches
+  'flat in Kashipur',
+  'flats in Kashipur',
+  'apartment in Kashipur',
+  'apartments in Kashipur',
+  '2BHK flat Kashipur',
+  '3BHK flat Kashipur',
+  '2BHK house Kashipur',
+  '3BHK house Kashipur',
+  // Plot searches
+  'plot in Kashipur',
+  'plots in Kashipur',
+  'land for sale Kashipur',
+  'plot for sale Kashipur',
+  // General property searches
+  'property in Kashipur',
+  'real estate in Kashipur',
+  'buy property in Kashipur',
+  'property for sale in Kashipur',
+  'residential property Kashipur',
+  'commercial property Kashipur',
+  'real estate Kashipur Uttarakhand',
+  // Luxury / premium
+  'luxury property Kashipur',
+  'luxury homes Kashipur',
+  'premium villas Kashipur',
+  'luxury real estate Kashipur',
+  // Agent/dealer searches
+  'real estate agent Kashipur',
+  'property dealer Kashipur',
+  'property consultant Kashipur',
+  'best property dealer Kashipur',
+  // Broader Uttarakhand
+  'Uttarakhand real estate',
+  'property in Uttarakhand',
+].join(', ')
 
 // LocalBusiness + RealEstateAgent JSON-LD — injected on every page
 const LOCAL_BUSINESS_LD = {

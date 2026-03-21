@@ -161,7 +161,7 @@ export default function FamilyBannerSection() {
                                 maxWidth: '420px',
                             }}
                         >
-                            At Property Clinic Kashipur, we don't just sell properties — we help
+                            At Kashi Property Clinic, we don't just sell properties — we help
                             families build memories. With trusted guidance, transparent dealings,
                             and a deep understanding of your needs, your dream home is closer
                             than you think.
