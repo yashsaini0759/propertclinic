@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /brochures/
 
-Sitemap: https://kashipropertyclinic.com/sitemap.xml
+Sitemap: https://www.kashipropertyclinic.com/sitemap.xml

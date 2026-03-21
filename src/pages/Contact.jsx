@@ -54,9 +54,9 @@ export default function Contact() {
     return (
         <main>
             <SEO 
-                title="Contact Us" 
-                description="Get in touch with Kashi Property Clinic for expert real estate guidance and seamless property solutions in Kashipur."
-                url="https://kashipropertyclinic.com/contact" 
+                title="Contact Kashi Property Clinic | Real Estate Experts in Kashipur"
+                description="Contact Kashi Property Clinic for expert real estate advice in Kashipur, Uttarakhand. Visit 2nd Floor, Spectrum Mall, Cheema Chauraha, Kashipur or call +91-9627088818."
+                url="https://www.kashipropertyclinic.com/contact" 
             />
             {/* Hero */}
             <section

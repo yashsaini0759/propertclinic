@@ -112,7 +112,7 @@ export default function HeroSection() {
                 >
                     <img
                         src={slide.image}
-                        alt={slide.name}
+                        alt={`${slide.name} – premium ${slide.tagline.toLowerCase()} in Kashipur, Uttarakhand by Kashi Property Clinic`}
                         className="w-full h-full object-cover object-center"
                         loading="eager"
                     />

@@ -6,7 +6,7 @@ import { FiMenu, FiX } from 'react-icons/fi'
 
 const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
+    // { name: 'Services', path: '/services' },
     { name: 'Properties', path: '/properties' },
     { name: 'Contact', path: '/contact' },
 ]
@@ -31,22 +31,14 @@ export default function Navbar() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.7, ease: 'easeOut' }}
                 className="fixed top-0 left-0 right-0 z-[999] transition-all duration-500"
-                style={
-                    scrolled
-                        ? {
-                            background: 'rgba(255, 255, 255, 0.95)',
-                            backdropFilter: 'blur(20px)',
-                            WebkitBackdropFilter: 'blur(20px)',
-                            boxShadow: '0 2px 20px rgba(15, 31, 58, 0.06)',
-                            paddingTop: '0.5rem',
-                            paddingBottom: '0.5rem',
-                        }
-                        : {
-                            background: 'transparent',
-                            paddingTop: '1.25rem',
-                            paddingBottom: '1.25rem',
-                        }
-                }
+                style={{
+                    background: 'rgba(255, 255, 255, 0.97)',
+                    backdropFilter: 'blur(20px)',
+                    WebkitBackdropFilter: 'blur(20px)',
+                    boxShadow: scrolled ? '0 2px 20px rgba(15, 31, 58, 0.08)' : '0 1px 0 rgba(15,31,58,0.06)',
+                    paddingTop: '0.25rem',
+                    paddingBottom: '0.25rem',
+                }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
                     {/* Logo */}
@@ -67,7 +59,7 @@ export default function Navbar() {
                                 key={link.path}
                                 to={link.path}
                                 className="relative font-body text-sm font-medium tracking-wide transition-colors duration-300 group"
-                                style={{ color: scrolled ? '#0F1F3A' : '#FFFFFF' }}
+                                style={{ color: '#0F1F3A' }}
                             >
                                 {link.name}
                                 <span
@@ -80,20 +72,11 @@ export default function Navbar() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="font-body text-sm font-semibold tracking-wide px-5 py-2 rounded-lg transition-all duration-300"
-                            style={
-                                scrolled
-                                    ? {
-                                        background: '#C0392B',
-                                        color: '#FFFFFF',
-                                        boxShadow: '0 4px 14px rgba(192,57,43,0.3)',
-                                    }
-                                    : {
-                                        background: 'rgba(255,255,255,0.15)',
-                                        backdropFilter: 'blur(10px)',
-                                        border: '1px solid rgba(255,255,255,0.4)',
-                                        color: '#FFFFFF',
-                                    }
-                            }
+                            style={{
+                                background: '#C0392B',
+                                color: '#FFFFFF',
+                                boxShadow: '0 4px 14px rgba(192,57,43,0.3)',
+                            }}
                         >
                             Enquire Now
                         </a>
@@ -102,7 +85,7 @@ export default function Navbar() {
                     {/* Mobile Hamburger */}
                     <button
                         className="md:hidden text-2xl focus:outline-none p-2 rounded-lg transition-colors"
-                        style={{ color: scrolled ? '#0F1F3A' : '#FFFFFF' }}
+                        style={{ color: '#0F1F3A' }}
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="Toggle menu"
                     >

@@ -54,9 +54,8 @@ export default function JourneySection() {
                     <p className="section-tag mb-3">About & Journey</p>
                     <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#0F1A2A] mb-4">
                         Our{' '}
-                        <span className="italic font-bold text-[#1E4D8F] relative">
+                        <span className="italic font-bold text-[#1E4D8F]">
                             Journey
-                            <span className="absolute -bottom-1 left-0 right-0 h-1 bg-[#C0392B] rounded-full" />
                         </span>
                     </h2>
                     <p className="text-gray-500 font-body max-w-xl mx-auto mt-6 text-lg">

@@ -8,14 +8,14 @@ import PageTransition from './components/PageTransition'
 import Navbar from './components/Navbar'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import ScrollProgress from './components/ScrollProgress'
-
-nprogress.configure({ showSpinner: false, speed: 400, minimum: 0.2 })
 import ScrollToTopButton from './components/ScrollToTopButton'
 import Home from './pages/Home'
-import Services from './pages/Services'
+// import Services from './pages/Services'
 import Properties from './pages/Properties'
 import Contact from './pages/Contact'
 import PropertyDetail from './pages/PropertyDetail'
+
+nprogress.configure({ showSpinner: false, speed: 400, minimum: 0.2 })
 
 function AnimatedRoutes() {
     const location = useLocation()
@@ -24,7 +24,7 @@ function AnimatedRoutes() {
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-                <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+                {/* <Route path="/services" element={<PageTransition><Services /></PageTransition>} /> */}
                 <Route path="/properties" element={<PageTransition><Properties /></PageTransition>} />
                 <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
                 <Route path="/property/:slug" element={<PageTransition><PropertyDetail /></PageTransition>} />

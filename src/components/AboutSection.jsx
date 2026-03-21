@@ -27,9 +27,8 @@ export default function AboutSection() {
                         style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)' }}
                     >
                         Your Trusted{' '}
-                        <span className="italic text-[#1E4D8F] relative inline-block">
+                        <span className="italic text-[#1E4D8F]">
                             Real Estate
-                            <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#C0392B] rounded-full" />
                         </span>
                         <br />Partner
                     </h2>

@@ -29,7 +29,7 @@ const ProjectCard = ({ project, index, isMobile, fromDirection }) => {
             <div className="relative h-60 overflow-hidden flex-shrink-0">
                 <img
                     src={project.image}
-                    alt={project.name}
+                    alt={`${project.name} – ${project.badge} ${project.type} property in Kashipur, Uttarakhand by Kashi Property Clinic`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
                     loading="lazy"
                 />
@@ -145,6 +145,40 @@ export default function ProjectsSection() {
                         ))}
                     </div>
                 </div>
+
+                {/* View All CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="text-center mt-12"
+                >
+                    <Link
+                        to="/properties"
+                        className="inline-flex items-center gap-2 font-body font-medium rounded-xl px-7 py-3"
+                        style={{
+                            background: 'transparent',
+                            border: '1.5px solid rgba(30,77,143,0.3)',
+                            color: '#1E4D8F',
+                            fontSize: '0.9rem',
+                            letterSpacing: '0.02em',
+                            transition: 'background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease',
+                        }}
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = 'rgba(30,77,143,0.06)'
+                            e.currentTarget.style.borderColor = 'rgba(30,77,143,0.55)'
+                            e.currentTarget.style.transform = 'translateY(-1px)'
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = 'transparent'
+                            e.currentTarget.style.borderColor = 'rgba(30,77,143,0.3)'
+                            e.currentTarget.style.transform = 'translateY(0)'
+                        }}
+                    >
+                        View All Properties <FiArrowRight size={15} />
+                    </Link>
+                </motion.div>
             </div>
         </section>
     )

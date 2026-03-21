@@ -9,9 +9,9 @@ export default function Properties() {
     return (
         <main>
             <SEO 
-                title="Exclusive Properties" 
-                description="Explore our curated selection of premium residential and commercial properties in Kashipur."
-                url="https://kashipropertyclinic.com/properties" 
+                title="Properties in Kashipur | Villas, Plots & Flats"
+                description="Explore premium residential and commercial properties in Kashipur, Uttarakhand. Buy villas, plots, luxury flats and commercial spaces with Kashi Property Clinic. Call +91-9627088818."
+                url="https://www.kashipropertyclinic.com/properties" 
             />
             {/* Hero */}
             <section
@@ -59,7 +59,7 @@ export default function Properties() {
                                 <div className="relative img-zoom h-56">
                                     <img
                                         src={prop.image}
-                                        alt={prop.name}
+                                        alt={`${prop.name} – ${prop.type === 'Commercial' ? 'commercial property' : prop.badge + ' villa'} in Kashipur by Kashi Property Clinic`}
                                         className="w-full h-full object-cover"
                                         loading="lazy"
                                     />

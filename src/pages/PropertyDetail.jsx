@@ -9,6 +9,8 @@ import PropertyMap from '../components/PropertyMap'
 import SEO from '../components/SEO'
 import PropertyVideo from '../components/PropertyVideo'
 import FloorPlansGallery from '../components/FloorPlansGallery'
+import JannatVillaPlans from '../components/JannatVillaPlans'
+import PropertyGallery from '../components/PropertyGallery'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
@@ -30,10 +32,32 @@ export default function PropertyDetail() {
   return (
     <main>
       <SEO 
-        title={property.name} 
-        description={`Explore ${property.name} in ${property.location}. ${property.description}`}
-        image={`https://kashipropertyclinic.com${property.image}`}
-        url={`https://kashipropertyclinic.com/property/${slug}`}
+        title={`${property.name} | Buy ${property.type} Property in Kashipur`}
+        description={`${property.name} — ${property.badge} ${property.type.toLowerCase()} property in Kashipur, Uttarakhand. ${property.description.slice(0, 100)}... Contact Kashi Property Clinic: +91-9627088818.`}
+        image={`https://www.kashipropertyclinic.com${property.bannerImage || property.image}`}
+        url={`https://www.kashipropertyclinic.com/property/${slug}`}
+        keywords={`${property.name}, ${property.type} property in Kashipur, ${property.badge} in Kashipur, buy property Kashipur, Kashi Property Clinic`}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: property.name,
+          description: property.description,
+          image: `https://www.kashipropertyclinic.com${property.bannerImage || property.image}`,
+          brand: { '@type': 'Brand', name: 'Kashi Property Clinic' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'INR',
+            price: '0',
+            priceSpecification: { '@type': 'UnitPriceSpecification', price: 'On Request' },
+            availability: 'https://schema.org/InStock',
+            seller: { '@type': 'Organization', name: 'Kashi Property Clinic' },
+          },
+          additionalProperty: [
+            { '@type': 'PropertyValue', name: 'Location', value: property.location },
+            { '@type': 'PropertyValue', name: 'Status', value: property.status },
+            { '@type': 'PropertyValue', name: 'Type', value: property.type },
+          ],
+        }}
       />
       {/* ── Hero Banner ── */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden"
@@ -99,11 +123,15 @@ export default function PropertyDetail() {
               </motion.div>
 
               {/* FLOOR PLANS & MAPS — right after About */}
-              {property.maps && property.maps.length > 0 && (
-                <FloorPlansGallery
-                  maps={property.maps}
-                  heading="Floor Plans & Maps"
-                />
+              {slug === 'jannat-villas' ? (
+                <JannatVillaPlans />
+              ) : (
+                property.maps && property.maps.length > 0 && (
+                  <FloorPlansGallery
+                    maps={property.maps}
+                    heading="Floor Plans & Maps"
+                  />
+                )
               )}
 
               {/* Highlights */}
@@ -122,6 +150,9 @@ export default function PropertyDetail() {
                   ))}
                 </ul>
               </motion.div>
+
+              {/* Gallery */}
+              <PropertyGallery images={property.gallery} />
 
               {/* Integrated Map */}
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}

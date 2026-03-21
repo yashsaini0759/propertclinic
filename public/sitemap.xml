@@ -1,60 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <!-- Static Pages -->
     <url>
-        <loc>https://kashipropertyclinic.com/</loc>
+        <loc>https://www.kashipropertyclinic.com/</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/services</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://kashipropertyclinic.com/properties</loc>
-        <changefreq>daily</changefreq>
+        <loc>https://www.kashipropertyclinic.com/properties</loc>
+        <lastmod>2025-03-21</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/contact</loc>
+        <loc>https://www.kashipropertyclinic.com/contact</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    <!-- Dynamic Property Pages -->
+
+    <!-- Property Detail Pages -->
     <url>
-        <loc>https://kashipropertyclinic.com/property/jannat-villas</loc>
+        <loc>https://www.kashipropertyclinic.com/property/jannat-villas</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/property/urban-bazar</loc>
+        <loc>https://www.kashipropertyclinic.com/property/vedanta-greens</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/property/the-kashipur-arcade</loc>
+        <loc>https://www.kashipropertyclinic.com/property/vedanta-heights</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/property/jannat-valley</loc>
+        <loc>https://www.kashipropertyclinic.com/property/vedanta-elite</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/property/the-highstreet</loc>
+        <loc>https://www.kashipropertyclinic.com/property/vedanta-avenue</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/property/al-bade-aestate</loc>
+        <loc>https://www.kashipropertyclinic.com/property/vedanta-residency</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://kashipropertyclinic.com/property/devrishi-enclave</loc>
+        <loc>https://www.kashipropertyclinic.com/property/urban-bazar</loc>
+        <lastmod>2025-03-21</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.80</priority>
     </url>
+    <url>
+        <loc>https://www.kashipropertyclinic.com/property/highstreet-vedanta</loc>
+        <lastmod>2025-03-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
 </urlset>
