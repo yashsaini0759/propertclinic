@@ -215,8 +215,8 @@ export default function Contact() {
                                             onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
                                         />
                                     </div>
-                                    <button type="submit" className="btn-primary w-full text-sm">
-                                        Send via WhatsApp 💬
+                                    <button type="submit" className="btn-primary w-full text-sm text-center justify-center">
+                                        Send via WhatsApp
                                     </button>
                                 </form>
                             )}
