@@ -238,6 +238,11 @@ export const properties = [
       'Ideal for brand anchoring & investment',
       'Prime location on busy commercial corridor',
     ],
+    gallery: [
+      '/images/urban_bazar/1.jpg.jpeg',
+      '/images/urban_bazar/2.jpg.jpeg',
+      '/images/urban_bazar/3.jpg.jpeg',
+    ],
     price: 'On Request',
     status: 'Available',
   },
