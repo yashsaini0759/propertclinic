@@ -11,6 +11,7 @@ import PropertyVideo from '../components/PropertyVideo'
 import FloorPlansGallery from '../components/FloorPlansGallery'
 import JannatVillaPlans from '../components/JannatVillaPlans'
 import PropertyGallery from '../components/PropertyGallery'
+import CategorizedPropertyGallery from '../components/CategorizedPropertyGallery'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
@@ -152,7 +153,21 @@ export default function PropertyDetail() {
               </motion.div>
 
               {/* Gallery */}
-              <PropertyGallery images={property.gallery} />
+              {property.categorizedGallery ? (
+                <CategorizedPropertyGallery 
+                  interiorImages={property.categorizedGallery.interior} 
+                  exteriorImages={property.categorizedGallery.exterior} 
+                />
+              ) : (
+                <PropertyGallery images={property.gallery} />
+              )}
+
+              {/* VIDEO COMPONENT */}
+              <PropertyVideo 
+                videoId={property.videoId} 
+                heading="Experience the Property" 
+                slogan="Take a virtual tour of your future home" 
+              />
 
               {/* Integrated Map */}
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
@@ -226,13 +241,6 @@ export default function PropertyDetail() {
                   </div>
                 )}
               </motion.div>
-
-              {/* VIDEO COMPONENT */}
-              <PropertyVideo 
-                videoId={property.videoId} 
-                heading="Experience the Property" 
-                slogan="Take a virtual tour of your future home" 
-              />
 
             </div>
 

@@ -8,20 +8,32 @@ export function useGlobalNavigate() {
 
     return async (to, options) => {
         const targetPath = typeof to === 'string' ? to : to.pathname;
+        const startPath = window.location.pathname;
         
         // Prevent redundant navigations
         if (location.pathname === targetPath) return;
 
         nprogress.start(); // Immediately show loading bar
 
-        const bannerUrl = getBannerForRoute(targetPath);
-        if (bannerUrl) {
-            await preloadImage(bannerUrl); // Wait strictly for banner
-        } else {
-            // Provide a tiny artificial delay to ensure progress bar has a moment to render
-            await new Promise((r) => setTimeout(r, 100));
-        }
+        try {
+            const bannerUrl = getBannerForRoute(targetPath);
+            if (bannerUrl) {
+                await preloadImage(bannerUrl); // Wait strictly for banner
+            } else {
+                // Provide a tiny artificial delay to ensure progress bar has a moment to render
+                await new Promise((r) => setTimeout(r, 100));
+            }
 
-        navigate(to, options);
+            // Important fix: If user hits browser 'Back' while preloading finishes, gracefully abort.
+            if (window.location.pathname === startPath) {
+                navigate(to, options);
+            } else {
+                // User navigated somewhere else during the delay. Drop it.
+                nprogress.done(true);
+            }
+        } catch (error) {
+            console.error("Navigation error:", error);
+            nprogress.done(true);
+        }
     };
 }

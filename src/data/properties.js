@@ -32,6 +32,32 @@ export const properties = [
     ],
     price: 'On Request',
     status: 'Ready to Move',
+    categorizedGallery: {
+      interior: [
+        '/images/gallery/interior/1.jpg',
+        '/images/gallery/interior/2.jpg',
+        '/images/gallery/interior/3.jpg',
+        '/images/gallery/interior/4.jpg',
+        '/images/gallery/interior/5.jpg',
+        '/images/gallery/interior/6.jpg',
+        '/images/gallery/interior/7.jpg',
+        '/images/gallery/interior/8.jpg',
+        '/images/gallery/interior/9.jpg',
+        '/images/gallery/interior/10.jpg',
+      ],
+      exterior: [
+        '/images/gallery/exterior/1.jpg',
+        '/images/gallery/exterior/2.jpg',
+        '/images/gallery/exterior/3.jpg',
+        '/images/gallery/exterior/4.jpg',
+        '/images/gallery/exterior/5.jpg',
+        '/images/gallery/exterior/6.jpg',
+        '/images/gallery/exterior/7.jpg',
+        '/images/gallery/exterior/8.jpg',
+        '/images/gallery/exterior/9.jpg',
+        '/images/gallery/exterior/10.jpg',
+      ]
+    },
   },
   {
     slug: 'jannat-villas',

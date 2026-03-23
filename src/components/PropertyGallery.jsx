@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiChevronLeft, FiChevronRight, FiMaximize2 } from 'react-icons/fi'
 
-export default function PropertyGallery({ images = [] }) {
+export default function PropertyGallery({ images = [], hideHeader = false, hideCard = false }) {
     const [lightboxIndex, setLightboxIndex] = useState(null)
 
     // Close on escape key
@@ -40,11 +40,15 @@ export default function PropertyGallery({ images = [] }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} 
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="rounded-2xl p-7 bg-white"
-                style={{ boxShadow: '0 4px 30px rgba(0,0,0,0.07)' }}
+                className={hideCard ? "" : "rounded-2xl p-7 bg-white"}
+                style={hideCard ? {} : { boxShadow: '0 4px 30px rgba(0,0,0,0.07)' }}
             >
-                <h2 className="font-heading text-2xl font-bold text-[#0B1F22] mb-3">Property Gallery</h2>
-                <div className="gold-divider mb-5" />
+                {!hideHeader && (
+                    <>
+                        <h2 className="font-heading text-2xl font-bold text-[#0B1F22] mb-3">Property Gallery</h2>
+                        <div className="gold-divider mb-5" />
+                    </>
+                )}
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     {images.map((src, index) => (
