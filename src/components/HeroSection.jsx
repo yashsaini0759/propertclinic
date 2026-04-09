@@ -134,12 +134,12 @@ export default function HeroSection() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -20 }}
                         transition={{ duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-                        className="w-full max-w-[440px] md:rounded-2xl overflow-hidden mt-12 lg:mt-0 md:bg-white/5 md:backdrop-blur-[18px]"
+                        className="w-full max-w-[440px] md:rounded-2xl overflow-hidden mt-12 lg:mt-0 md:bg-white/5 md:backdrop-blur-[18px] min-h-[400px] md:min-h-[440px] flex flex-col"
                     >
                         {/* Red top accent strip — hidden on mobile */}
-                        <div className="hidden md:block h-[3px] w-full" style={{ background: 'linear-gradient(90deg, #C0392B, #E74C3C)' }} />
+                        <div className="hidden md:block h-[3px] w-full shrink-0" style={{ background: 'linear-gradient(90deg, #C0392B, #E74C3C)' }} />
 
-                        <div className="px-7 py-8 sm:px-9 sm:py-10">
+                        <div className="px-7 py-6 sm:px-9 sm:py-8 flex-1 flex flex-col justify-center">
 
                             {/* Tagline */}
                             <motion.div

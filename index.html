@@ -5,41 +5,154 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/logo/property_clinic_main_logo.png" />
+    <!-- ═══ Favicon & Web App Identity ═══ -->
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
 
-    <!-- Fallback SEO (overridden by React Helmet on each route) -->
-    <title>Kashi Property Clinic | Trusted Real Estate in Kashipur</title>
-    <meta name="description" content="Kashi Property Clinic — your trusted real estate partner in Kashipur, Uttarakhand. Explore premium villas, plots, flats and commercial properties. Call +91-9627088818." />
-    <meta name="keywords" content="property in Kashipur, real estate Kashipur, buy property Kashipur, villas Kashipur, plots Kashipur, Kashi Property Clinic, Kashipur Property Clinic" />
+    <!-- ═══ Primary SEO ═══ -->
+    <title>Kashi Property Clinic | Best Real Estate in Kashipur, Uttarakhand</title>
+    <meta name="description"
+        content="Kashi Property Clinic – #1 real estate agent in Kashipur, Uttarakhand. Buy luxury villas, 2BHK & 3BHK flats, premium plots & commercial shops. Vedanta Greens, Jannat Villas, Vedanta Heights & more. Call +91-9627088818." />
+    <meta name="keywords"
+        content="property in Kashipur, real estate Kashipur, buy property Kashipur, villas Kashipur, luxury villa Kashipur, plots Kashipur, 2BHK Kashipur, 3BHK Kashipur, flat in Kashipur, apartment Kashipur, commercial property Kashipur, Kashi Property Clinic, Jannat Villas, Vedanta Greens, Vedanta Heights, Vedanta Elite, Vedanta Avenue, Vedanta Residency, Urban Bazar Kashipur, Highstreet Kashipur, Walkway Kashipur, Noor Kashipur, property dealer Kashipur, best property agent Kashipur Uttarakhand" />
     <meta name="author" content="Kashi Property Clinic" />
-    <meta name="robots" content="index, follow" />
+    <meta name="publisher" content="Kashi Property Clinic" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://www.kashipropertyclinic.com/" />
 
-    <!-- Theme / PWA -->
+    <!-- ═══ Theme / PWA ═══ -->
     <meta name="theme-color" content="#0F1A2A" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Kashi Property Clinic" />
+    <meta name="application-name" content="Kashi Property Clinic" />
 
-    <!-- Open Graph fallback -->
+    <!-- ═══ Open Graph (Facebook / WhatsApp previews) ═══ -->
     <meta property="og:site_name" content="Kashi Property Clinic" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kashi Property Clinic | Trusted Real Estate in Kashipur" />
-    <meta property="og:description" content="Explore premium villas, plots and flats in Kashipur, Uttarakhand with Kashi Property Clinic." />
+    <meta property="og:title" content="Kashi Property Clinic | Best Real Estate in Kashipur, Uttarakhand" />
+    <meta property="og:description"
+        content="Buy premium villas, 2BHK & 3BHK flats, plots & commercial shops in Kashipur with Kashi Property Clinic. Call +91-9627088818." />
     <meta property="og:image" content="https://www.kashipropertyclinic.com/images/logo/property_clinic_main_logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://www.kashipropertyclinic.com/" />
+    <meta property="og:locale" content="en_IN" />
 
-    <!-- Geo / Local -->
+    <!-- ═══ Twitter Card ═══ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kashi Property Clinic | Real Estate in Kashipur" />
+    <meta name="twitter:description"
+        content="Premium villas, plots & commercial properties in Kashipur, Uttarakhand. Call +91-9627088818." />
+    <meta name="twitter:image" content="https://www.kashipropertyclinic.com/images/logo/property_clinic_main_logo.png" />
+
+    <!-- ═══ Geo / Local SEO ═══ -->
     <meta name="geo.region" content="IN-UT" />
     <meta name="geo.placename" content="Kashipur, Uttarakhand, India" />
     <meta name="geo.position" content="29.2109;78.9621" />
     <meta name="ICBM" content="29.2109, 78.9621" />
 
-    <!-- Font preconnect for performance -->
+    <!-- ═══ Sitelinks Searchbox JSON-LD ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Kashi Property Clinic",
+      "alternateName": "Kashipur Property Clinic",
+      "url": "https://www.kashipropertyclinic.com",
+      "description": "Trusted real estate agent in Kashipur offering premium villas, plots, flats and commercial properties.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.kashipropertyclinic.com/properties?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ═══ Organisation / LocalBusiness JSON-LD ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "RealEstateAgent"],
+      "@id": "https://www.kashipropertyclinic.com/#business",
+      "name": "Kashi Property Clinic",
+      "alternateName": "Kashipur Property Clinic",
+      "url": "https://www.kashipropertyclinic.com",
+      "logo": "https://www.kashipropertyclinic.com/images/logo/property_clinic_main_logo.png",
+      "image": "https://www.kashipropertyclinic.com/images/logo/property_clinic_main_logo.png",
+      "description": "Kashi Property Clinic is the #1 trusted real estate agent in Kashipur, Uttarakhand. We offer premium villas, 2BHK & 3BHK flats, residential plots and commercial properties.",
+      "telephone": "+91-9627088818",
+      "email": "contact@kashipropertyclinic.com",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Bank Transfer, Cheque",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, Spectrum Mall, Cheema Chauraha",
+        "addressLocality": "Kashipur",
+        "addressRegion": "Uttarakhand",
+        "postalCode": "244713",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.2109,
+        "longitude": 78.9621
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/PropertyClinicKashipur/",
+        "https://www.instagram.com/property_clinic_kashipur/"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Kashipur",
+        "containedIn": { "@type": "State", "name": "Uttarakhand" }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Properties in Kashipur",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Vedanta Greens – 3 & 4 BHK Villas", "url": "https://www.kashipropertyclinic.com/property/vedanta-greens" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Jannat Villas – Premium Luxury Villas", "url": "https://www.kashipropertyclinic.com/property/jannat-villas" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Vedanta Heights – Luxury Residences", "url": "https://www.kashipropertyclinic.com/property/vedanta-heights" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Vedanta Elite – Ultra Luxury Residences", "url": "https://www.kashipropertyclinic.com/property/vedanta-elite" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Vedanta Avenue – Premium Plots", "url": "https://www.kashipropertyclinic.com/property/vedanta-avenue" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Vedanta Residency – Luxury Apartments", "url": "https://www.kashipropertyclinic.com/property/vedanta-residency" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Urban Bazar by Vedanta – Commercial", "url": "https://www.kashipropertyclinic.com/property/urban-bazar" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Highstreet by Vedanta – Commercial Hub", "url": "https://www.kashipropertyclinic.com/property/highstreet-vedanta" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Walkway – Highway Commercial Complex", "url": "https://www.kashipropertyclinic.com/property/walkway" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "City Center – Commercial Kashipur", "url": "https://www.kashipropertyclinic.com/property/city-center" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Noor – Premium Residential Plots", "url": "https://www.kashipropertyclinic.com/property/noor" } }
+        ]
+      }
+    }
+    </script>
+
+    <!-- ═══ Font preconnect for performance ═══ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
+
+    <!-- ═══ DNS prefetch for 3rd party services ═══ -->
+    <link rel="dns-prefetch" href="//maps.googleapis.com" />
+    <link rel="dns-prefetch" href="//wa.me" />
+    <link rel="dns-prefetch" href="//vimeo.com" />
 </head>
 
 <body>

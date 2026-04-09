@@ -1,74 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!-- Static Pages -->
+    <!-- ═══════════════ STATIC PAGES ═══════════════ -->
     <url>
         <loc>https://www.kashipropertyclinic.com/</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/logo/property_clinic_main_logo.png</image:loc>
+            <image:title>Kashi Property Clinic – Trusted Real Estate in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/properties</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/contact</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 
-    <!-- Property Detail Pages -->
-    <url>
-        <loc>https://www.kashipropertyclinic.com/property/jannat-villas</loc>
-        <lastmod>2025-03-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
+    <!-- ═══════════════ PROPERTY DETAIL PAGES ═══════════════ -->
     <url>
         <loc>https://www.kashipropertyclinic.com/property/vedanta-greens</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/vedanta_greens/hero_face.png</image:loc>
+            <image:title>Vedanta Greens – 3 &amp; 4 BHK Villas in Kashipur</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.kashipropertyclinic.com/property/jannat-villas</loc>
+        <lastmod>2026-04-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/JANNAT%20VILA/FACE%20OF%20JANNAT%20VILLA.jpg</image:loc>
+            <image:title>Jannat Villas – Premium Luxury Villas in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/property/vedanta-heights</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.90</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/vedanta_heights/VEDANTA%20HEIGHTS%20HERO%20FACE.png</image:loc>
+            <image:title>Vedanta Heights – Luxury Residences in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/property/vedanta-elite</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.88</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/VEDANTA%20ELITE%20%20(1)/VEDANTA%20ELITE%20FACE.png</image:loc>
+            <image:title>Vedanta Elite – Ultra Luxury 3 &amp; 4 BHK in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/property/vedanta-avenue</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.88</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/VEDANTA%20AVENUE/VEDANTA%20AVENUE%20FACE.png</image:loc>
+            <image:title>Vedanta Avenue – Premium Plots in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/property/vedanta-residency</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
+        <priority>0.88</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/vedanta_residency/VEDANTA%20RESIDENCY%20FACE.png</image:loc>
+            <image:title>Vedanta Residency – Luxury Apartments in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/property/urban-bazar</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.80</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/project_urban_bazar.png</image:loc>
+            <image:title>Urban Bazar by Vedanta – Commercial Space in Kashipur</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.kashipropertyclinic.com/property/highstreet-vedanta</loc>
-        <lastmod>2025-03-21</lastmod>
+        <lastmod>2026-04-09</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.80</priority>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/project_highstreet.png</image:loc>
+            <image:title>Highstreet by Vedanta – Premium Commercial Hub Kashipur</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.kashipropertyclinic.com/property/walkway</loc>
+        <lastmod>2026-04-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.87</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/WALKWAY/WALKWAY%20FACE%20CARD.jpg</image:loc>
+            <image:title>Walkway – Highway Commercial Complex near NH 74 Kashipur</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.kashipropertyclinic.com/property/city-center</loc>
+        <lastmod>2026-04-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.87</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/CITY%20CENTER/FACE%20CARD%20CITY%20CENTER.jpg</image:loc>
+            <image:title>City Center – Commercial Property in the Heart of Kashipur</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.kashipropertyclinic.com/property/noor</loc>
+        <lastmod>2026-04-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.87</priority>
+        <image:image>
+            <image:loc>https://www.kashipropertyclinic.com/images/NOOR/FACE%20CARD%20NOOR.jpg</image:loc>
+            <image:title>Noor – Premium Residential Plots in Kashipur</image:title>
+        </image:image>
     </url>
 
 </urlset>

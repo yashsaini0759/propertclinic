@@ -5,15 +5,16 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 const footerLinks = {
     Navigate: [
         { label: 'Home', href: '/' },
-        { label: 'Services', href: '/services' },
-        { label: 'Properties', href: '/properties' },
+        { label: 'All Properties', href: '/properties' },
         { label: 'Contact Us', href: '/contact' },
     ],
-    Services: [
-        { label: 'Property Management', href: '/services' },
-        { label: 'Legal Transactions', href: '/services' },
-        { label: 'Home Loans', href: '/services' },
-        { label: 'Property Search', href: '/services' },
+    Properties: [
+        { label: 'Vedanta Greens', href: '/property/vedanta-greens' },
+        { label: 'Jannat Villas', href: '/property/jannat-villas' },
+        { label: 'Vedanta Heights', href: '/property/vedanta-heights' },
+        { label: 'Vedanta Elite', href: '/property/vedanta-elite' },
+        { label: 'Vedanta Avenue', href: '/property/vedanta-avenue' },
+        { label: 'More...', href: '/properties' },
     ],
 }
 
@@ -27,7 +28,7 @@ export default function Footer() {
             />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
 
                     {/* Brand Column */}
                     <div className="lg:col-span-1">

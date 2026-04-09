@@ -14,8 +14,8 @@ export default function Home() {
     return (
         <main>
         <SEO
-            title="Kashi Property Clinic | Trusted Real Estate in Kashipur"
-            description="Find premium villas, plots, flats and commercial properties in Kashipur with Kashi Property Clinic. Trusted real estate agents in Kashipur since 2018. Call +91-9627088818."
+            title="Kashi Property Clinic | #1 Real Estate Agent in Kashipur, Uttarakhand"
+            description="Kashi Property Clinic – trusted real estate in Kashipur. Buy luxury villas (Jannat Villas, Vedanta Greens), premium flats (Vedanta Heights), plots (Vedanta Avenue, Noor) & commercial spaces (Urban Bazar, Walkway, City Center). Call +91-9627088818."
             url="https://www.kashipropertyclinic.com/"
             includeFaq={true}
         />

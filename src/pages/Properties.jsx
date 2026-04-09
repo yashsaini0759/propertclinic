@@ -9,9 +9,13 @@ export default function Properties() {
     return (
         <main>
             <SEO 
-                title="Properties in Kashipur | Villas, Plots & Flats"
-                description="Explore premium residential and commercial properties in Kashipur, Uttarakhand. Buy villas, plots, luxury flats and commercial spaces with Kashi Property Clinic. Call +91-9627088818."
-                url="https://www.kashipropertyclinic.com/properties" 
+                title="Properties in Kashipur | Buy Villas, Plots, Flats & Commercial Spaces | Kashi Property Clinic"
+                description="Browse all premium properties in Kashipur, Uttarakhand — 3BHK & 4BHK villas, luxury flats, residential plots & commercial shops. Vedanta Greens, Jannat Villas, Vedanta Heights, Noor & more. Call +91-9627088818."
+                url="https://www.kashipropertyclinic.com/properties"
+                breadcrumbs={[
+                    { name: 'Home', url: 'https://www.kashipropertyclinic.com/' },
+                    { name: 'Properties', url: 'https://www.kashipropertyclinic.com/properties' },
+                ]}
             />
             {/* Hero */}
             <section

@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /brochures/
+
+# Block crawling of assets only (not brochures — they are content)
+Disallow: /src/
+Disallow: /.vscode/
+
+# Crawl-delay hint for polite bots
+Crawl-delay: 5
 
 Sitemap: https://www.kashipropertyclinic.com/sitemap.xml

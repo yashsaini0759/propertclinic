@@ -33,30 +33,44 @@ export default function PropertyDetail() {
   return (
     <main>
       <SEO 
-        title={`${property.name} | Buy ${property.type} Property in Kashipur`}
-        description={`${property.name} — ${property.badge} ${property.type.toLowerCase()} property in Kashipur, Uttarakhand. ${property.description.slice(0, 100)}... Contact Kashi Property Clinic: +91-9627088818.`}
+        title={`${property.name} | ${property.badge} ${property.type} Property in Kashipur, Uttarakhand`}
+        description={`${property.name} is a ${property.badge} ${property.type.toLowerCase()} property in Kashipur, Uttarakhand. ${property.description.slice(0, 130)}... Status: ${property.status}. Contact Kashi Property Clinic: +91-9627088818.`}
         image={`https://www.kashipropertyclinic.com${property.bannerImage || property.image}`}
         url={`https://www.kashipropertyclinic.com/property/${slug}`}
-        keywords={`${property.name}, ${property.type} property in Kashipur, ${property.badge} in Kashipur, buy property Kashipur, Kashi Property Clinic`}
+        keywords={`${property.name}, ${property.name} Kashipur, ${property.badge} in Kashipur, ${property.type} property Kashipur, buy ${property.type.toLowerCase()} Kashipur, ${property.status} property Kashipur, Kashi Property Clinic, property in Kashipur Uttarakhand`}
+        breadcrumbs={[
+          { name: 'Home', url: 'https://www.kashipropertyclinic.com/' },
+          { name: 'Properties', url: 'https://www.kashipropertyclinic.com/properties' },
+          { name: property.name, url: `https://www.kashipropertyclinic.com/property/${slug}` },
+        ]}
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Product',
+          '@id': `https://www.kashipropertyclinic.com/property/${slug}`,
           name: property.name,
           description: property.description,
           image: `https://www.kashipropertyclinic.com${property.bannerImage || property.image}`,
+          url: `https://www.kashipropertyclinic.com/property/${slug}`,
           brand: { '@type': 'Brand', name: 'Kashi Property Clinic' },
           offers: {
             '@type': 'Offer',
             priceCurrency: 'INR',
             price: '0',
             priceSpecification: { '@type': 'UnitPriceSpecification', price: 'On Request' },
-            availability: 'https://schema.org/InStock',
-            seller: { '@type': 'Organization', name: 'Kashi Property Clinic' },
+            availability: property.status === 'Ready to Move' ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+            seller: {
+              '@type': 'Organization',
+              name: 'Kashi Property Clinic',
+              telephone: '+91-9627088818',
+              url: 'https://www.kashipropertyclinic.com',
+            },
+            areaServed: { '@type': 'City', name: 'Kashipur', containedIn: 'Uttarakhand, India' },
           },
           additionalProperty: [
             { '@type': 'PropertyValue', name: 'Location', value: property.location },
             { '@type': 'PropertyValue', name: 'Status', value: property.status },
             { '@type': 'PropertyValue', name: 'Type', value: property.type },
+            { '@type': 'PropertyValue', name: 'Category', value: property.badge },
           ],
         }}
       />
@@ -113,14 +127,29 @@ export default function PropertyDetail() {
             {/* LEFT — Description + Highlights + Map */}
             <div className="lg:col-span-2 flex flex-col gap-8">
 
-              {/* Description Card */}
+              {/* Description & Logo Card */}
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.6 }}
                 className="rounded-2xl p-7 bg-white"
                 style={{ boxShadow: '0 4px 30px rgba(0,0,0,0.07)' }}>
-                <h2 className="font-heading text-2xl font-bold text-[#0B1F22] mb-3">About this Property</h2>
-                <div className="gold-divider mb-5" />
-                <p className="text-gray-500 font-body leading-relaxed">{property.description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_200px] gap-8 items-center">
+                  <div>
+                    <h2 className="font-heading text-2xl font-bold text-[#0B1F22] mb-3">About this Property</h2>
+                    <div className="gold-divider mb-5" />
+                    <p className="text-gray-500 font-body leading-relaxed">{property.description}</p>
+                  </div>
+                  {property.logo && (
+                    <div className="hidden md:flex justify-end border-l border-gray-100 pl-8 h-full items-center">
+                      <img src={property.logo} alt={`${property.name} Logo`} className="w-full object-contain max-h-32" />
+                    </div>
+                  )}
+                  {/* Mobile Logo View */}
+                  {property.logo && (
+                    <div className="md:hidden flex justify-center mt-4 border-t border-gray-100 pt-6">
+                      <img src={property.logo} alt={`${property.name} Logo`} className="w-3/4 object-contain max-h-24" />
+                    </div>
+                  )}
+                </div>
               </motion.div>
 
               {/* FLOOR PLANS & MAPS — right after About */}

@@ -10,6 +10,19 @@ const highlights = [
     'Dedicated post-sale support',
 ]
 
+const propertyLogos = [
+    'CITY CENTER BY VEDANTA LOGO.jpg',
+    'HIGHSTREETS BY VEDANTA LOGO.jpg',
+    'JANNAT LOGO.jpg',
+    'URBAN BAZAR BY VEDANTA LOGO.jpg',
+    'VEDANTA AVENUE LOGO.jpg',
+    'VEDANTA ELITE LOGO.jpg',
+    'VEDANTA GREENS LOGO.jpg',
+    'VEDANTA HEIGHTS LOGO.jpg',
+    'VEDANTA RESIDENCY LOGO.jpg',
+    'WALK WAY BY VEDANTA .jpg',
+]
+
 export default function AboutSection() {
     return (
         <section className="py-16 px-4 sm:px-6 overflow-hidden" style={{ background: '#FFFFFF' }}>
@@ -60,7 +73,7 @@ export default function AboutSection() {
                     </Link>
                 </motion.div>
 
-                {/* Right – Image */}
+                {/* Right – Logos Grid */}
                 <motion.div
                     initial={{ opacity: 0, x: 40 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -68,24 +81,27 @@ export default function AboutSection() {
                     transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="relative"
                 >
-                    {/* Main image */}
-                    <div className="rounded-2xl overflow-hidden img-zoom" style={{ boxShadow: '0 20px 60px rgba(15,31,58,0.15)' }}>
-                        <img
-                            src="/images/about_property.png"
-                            alt="Kashi Property Clinic"
-                            className="w-full h-[480px] object-cover"
-                            loading="lazy"
-                        />
-                        <div className="absolute inset-0 rounded-2xl"
-                            style={{ background: 'linear-gradient(160deg, transparent 60%, rgba(15,31,58,0.15))' }}
-                        />
+                    <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-gray-50/50 p-6 rounded-3xl" style={{ boxShadow: 'inset 0 2px 20px rgba(15,31,58,0.02)' }}>
+                        {propertyLogos.map((logo, idx) => (
+                            <div 
+                                key={idx} 
+                                className="bg-white rounded-2xl shadow-sm border border-gray-100/60 p-4 sm:p-5 flex items-center justify-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                            >
+                                <img
+                                    src={`/images/PROPERTY LOGOS/${logo}`}
+                                    alt={logo.replace('.jpg', '')}
+                                    className="w-full h-16 sm:h-20 object-contain"
+                                    loading="lazy"
+                                />
+                            </div>
+                        ))}
                     </div>
 
                     {/* Floating badge */}
                     <motion.div
                         animate={{ y: [0, -8, 0] }}
                         transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-                        className="absolute -bottom-6 -left-6 bg-white rounded-2xl px-5 py-4 text-center"
+                        className="absolute -bottom-6 -left-6 bg-white rounded-2xl px-5 py-4 text-center z-10"
                         style={{ boxShadow: '0 8px 32px rgba(15,31,58,0.12)', minWidth: 140, border: '1px solid rgba(30,77,143,0.1)' }}
                     >
                         <p className="font-heading text-3xl font-bold text-[#1E4D8F]">8+</p>
@@ -93,9 +109,9 @@ export default function AboutSection() {
                     </motion.div>
 
                     {/* Decorative rings — blue tone */}
-                    <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full pointer-events-none"
+                    <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full pointer-events-none -z-10"
                         style={{ border: '1.5px solid rgba(30,77,143,0.18)' }} />
-                    <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full pointer-events-none"
+                    <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full pointer-events-none -z-10"
                         style={{ border: '1.5px solid rgba(30,77,143,0.28)' }} />
                 </motion.div>
             </div>
