@@ -260,7 +260,7 @@ export const properties = [
     badge: 'Commercial',
     type: 'Commercial',
     location: 'Kashipur, Uttarakhand',
-    image: '/images/vedanta_highstreets/HIGH_STREET FACE CARD.png',
+    image: '/images/vedanta_highstreets/HIGH_STREET_FACE_CARD.png',
     bannerImage: '/images/vedanta_highstreets/HIGHSTREET BY VEDANTA BANNER.png',
     brochure: '/brochures/highstreet-vedanta.pdf',
     mapLink: 'https://www.google.com/maps?q=29.2119,78.9513',
